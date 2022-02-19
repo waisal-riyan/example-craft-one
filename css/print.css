@@ -1,0 +1,135 @@
+@media print{
+	#pages header#header .header-content .span9,
+	#pages header#header .header-content .span9 .tagline,
+	#pages header#header .header-content {
+		margin: 1em 0 0;
+		padding: 0;
+	}
+
+	#pages section#content .content-wrapper .span3,
+	.print-nav,
+	#pages section#content.contact-list .entry section.contact-description .content .contact-form.row-fluid,
+	#pages section#content.contact-list .entry section.contact-description footer,
+	footer#footer,
+	#pages footer#footer,
+	#pages section#content .content-wrapper > .span3,
+	.row-fluid.visible-phone.mobilemenu,
+	.row-fluid.header-content.hidden-phone nav {
+		display: none !important;
+	}
+	#pages header#header {
+		height: auto;
+		background: none;
+	}
+	
+	#pages header#header .mobileheader {
+		display: none !important;
+	}
+	
+	.row-fluid.header-content.hidden-phone {
+		display: block !important;
+	}
+	
+	body,
+	#pages section#content.contact-list .entry,
+	#pages section#content.contact-list .entry section.contact-description header .detail,
+	#pages section#content.contact-list .entry section.contact-description header h3,
+	#pages section#content.contact-list .entry section.contact-description .content h5,
+	#pages section#content.contact-list .entry section.contact-description header ul.feature-list li,
+	#pages section#content.contact-list .entry section.contact-description .content p,
+	#pages section#content.contact-list .entry section.contact-description .content .contact-info {
+		font-size: 12px;
+	}
+	
+	body {font: fit-to-print}
+	
+	#pages section#content.contact-list .entry h3.title {
+		font-size: 14px;
+	}
+	
+	#pages section#content.contact-list .entry section.contact-description {
+		margin-top: 0 !important;
+	}
+	#pages section#content.contact-list .entry section.contact-description header ul.feature-list li {
+		margin-bottom: 5px;
+	}
+	#pages header#header .mobileheader {
+		padding-top: 10 !important;
+	}
+	
+	table {
+		display: table !important;
+		max-width: 100% !important;
+		background-color: transparent !important;
+		border-collapse: collapse !important;
+		border-spacing: 0 !important;
+		border-color: gray !important;
+	}
+	
+	thead {
+		display: table-header-group !important;
+		vertical-align: middle !important;
+		border-color: inherit !important;
+	}
+	
+	tr {
+		display: table-row !important;
+		vertical-align: inherit !important;
+		border-color: inherit !important;
+	}
+	
+	td, th {
+		display: table-cell !important;
+		vertical-align: inherit !important;
+	}
+	
+	#pages section#content.contact-list .entry h3.title, h2, #pages section#content.contact-list .entry section.contact-description header h3 {
+		font-size: 22px;
+		font-family: 'ITCFranklinGothicStd-BkCd', Helvetica, Arial;
+		line-height: 27px;
+		margin: 0;
+		padding: 0;
+		text-transform: uppercase;
+		font-weight: normal;
+		letter-spacing: 1px;
+	}
+	
+	#pages section#content.contact-list .entry h3.title {
+		margin-bottom: 40px
+	}
+	
+	#pages section#content.contact-list .entry section.contact-description {
+		margin: 0 !important;
+	}
+	
+	h1, h2, h3, h4, h5 {  color: #000  !important;	}
+
+	.row-fluid.header-content.hidden-phone .span3 {
+		text-align: right;
+		padding-right: 10px;
+		width: 100px !important;
+		margin-left: 40px;
+	}
+	
+	.row-fluid.header-content.hidden-phone .span3 img {
+		padding-top: 10px
+	}
+	#pages header#header .header-content .tagline h1 { font-size: 50px } 
+	#pages header#header .header-content .tagline h3 { font-size: 25px; margin-top: 0 } 
+	#pages header#header .header-content .tagline h4 { font-size: 16px; margin: 10px 0 0 4px; }
+	#pages section#content.contact-list .entry { margin-top: 63px !important; }
+	
+	.contact-description img {
+		width: 90%;
+	}
+	table.visible-phone { 
+		display: none !important;
+	}
+	table.hidden-phone { 
+		display: block !important;
+	}
+	
+	.span9.right-content > .entry > .row-fluid > .span2 {
+		display: none !important;
+	}
+}

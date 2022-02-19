@@ -1,0 +1,2033 @@
+/*---------------------------------------------------
+    LESS Elements 0.6
+  ---------------------------------------------------
+    A set of useful LESS mixins by Dmitry Fadeyev
+    Special thanks for mixin suggestions to:
+      Kris Van Herzeele,
+      Benoit Adam,
+      Portenart Emile-Victor,
+      Ryan Faerman
+
+    More info at: http://lesselements.com
+-----------------------------------------------------*/
+@font-face {
+  font-family: 'robotoitalic';
+  src: url('fonts/roboto-italic-webfont.eot');
+  src: url('fonts/roboto-italic-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/roboto-italic-webfont.woff') format('woff'), url('fonts/roboto-italic-webfont.ttf') format('truetype'), url('fonts/roboto-italic-webfont.svg#robotoitalic') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'robotolight';
+  src: url('fonts/roboto-light-webfont.eot');
+  src: url('fonts/roboto-light-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/roboto-light-webfont.woff') format('woff'), url('fonts/roboto-light-webfont.ttf') format('truetype'), url('fonts/roboto-light-webfont.svg#robotolight') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'robotolight_italic';
+  src: url('fonts/roboto-lightitalic-webfont.eot');
+  src: url('fonts/roboto-lightitalic-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/roboto-lightitalic-webfont.woff') format('woff'), url('fonts/roboto-lightitalic-webfont.ttf') format('truetype'), url('fonts/roboto-lightitalic-webfont.svg#robotolight_italic') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'robotobold';
+  src: url('fonts/roboto-bold-webfont.eot');
+  src: url('fonts/roboto-bold-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/roboto-bold-webfont.woff') format('woff'), url('fonts/roboto-bold-webfont.ttf') format('truetype'), url('fonts/roboto-bold-webfont.svg#robotobold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'robotoregular';
+  src: url('fonts/roboto-regular-webfont.eot');
+  src: url('fonts/roboto-regular-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/roboto-regular-webfont.woff') format('woff'), url('fonts/roboto-regular-webfont.ttf') format('truetype'), url('fonts/roboto-regular-webfont.svg#robotoregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'robotomedium';
+  src: url('fonts/roboto-medium-webfont.eot');
+  src: url('fonts/roboto-medium-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/roboto-medium-webfont.woff') format('woff'), url('fonts/roboto-medium-webfont.ttf') format('truetype'), url('fonts/roboto-medium-webfont.svg#robotoregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ITCFranklinGothicStd-MdCd';
+  src: url('fonts/itcfranklingothicstdmdcd.eot');
+  src: url('fonts/itcfranklingothicstdmdcd.eot?#iefix') format('embedded-opentype'), url('fonts/itcfranklingothicstdmdcd.woff') format('woff'), url('fonts/itcfranklingothicstdmdcd.ttf') format('truetype'), url('fonts/itcfranklingothicstdmdcd.svg#ITCFranklinGothicStd-MdCd') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ITCFranklinGothicStd-DmCd';
+  src: url('fonts/itcfranklingothicstddmcd.eot');
+  src: url('fonts/itcfranklingothicstddmcd.eot?#iefix') format('embedded-opentype'), url('fonts/itcfranklingothicstddmcd.woff') format('woff'), url('fonts/itcfranklingothicstddmcd.ttf') format('truetype'), url('fonts/itcfranklingothicstddmcd.svg#ITCFranklinGothicStd-DmCd') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ITCFranklinGothicStd-BkCd';
+  src: url('fonts/itcfranklingothicstdbkcd.eot');
+  src: url('fonts/itcfranklingothicstdbkcd.eot?#iefix') format('embedded-opentype'), url('fonts/itcfranklingothicstdbkcd.woff') format('woff'), url('fonts/itcfranklingothicstdbkcd.ttf') format('truetype'), url('fonts/itcfranklingothicstdbkcd.svg#ITCFranklinGothicStd-BkCd') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Colors */
+/* Font Family & Sizes */
+/* Font Weights */
+/* Selection & Placeholder */
+::selection {
+  color: #ffffff;
+  background: #c1a01d;
+}
+::-moz-selection {
+  color: #ffffff;
+  background: #c1a01d;
+}
+::-webkit-selection {
+  color: #ffffff;
+  background: #c1a01d;
+}
+::-webkit-input-placeholder {
+  color: #919191;
+  font-family: 'robotolight', sans-serif;
+  font-size: 13px;
+  -webkit-font-smoothing: antialiased;
+}
+input:-moz-placeholder {
+  color: #919191;
+  font-family: 'robotolight', sans-serif;
+  font-size: 13px;
+  -webkit-font-smoothing: antialiased;
+}
+input:-ms-input-placeholder {
+  color: #919191;
+  font-family: 'robotolight', sans-serif;
+  font-size: 13px;
+  -webkit-font-smoothing: antialiased;
+}
+/* Firefox's outline */
+button::-moz-focus-inner {
+  border: 0;
+}
+input::-moz-focus-inner {
+  border: 0;
+}
+a:focus {
+  outline: none;
+}
+/* Anchor */
+a {
+  color: #c1a01d;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+a:visited {
+  color: #c1a01d;
+}
+a:hover {
+  color: #947b05;
+  text-decoration: none;
+}
+/* Alignment */
+.align-center {
+  text-align: center;
+}
+.align-justify {
+  text-align: justify;
+}
+.align-left {
+  text-align: left;
+}
+.align-right {
+  text-align: right;
+}
+/* Html & Body */
+body {
+  font-family: 'robotolight', sans-serif;
+  font-size: 13px;
+}
+/* Home */
+#home {
+  background-color: #000;
+  /*
+	background: url('../images/site/background-home.jpg') top left no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+	*/
+
+}
+#home #wrapper .home-splash {
+  color: #ffffff;
+  margin-top: 168px;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 365px;
+  padding-left: 68px;
+}
+#home #wrapper .home-splash > .row {
+  margin-top: 60px;
+  margin-left: 0;
+}
+#home #wrapper .home-splash > .row > .span2 .tagline {
+  font-family: 'ITCFranklinGothicStd-BkCd', Helvetica, Arial;
+  color: #ffffff;
+  text-transform: uppercase;
+  padding-top: 8px;
+}
+#home #wrapper .home-splash > .row > .span2 .tagline h1, #home #wrapper .home-splash > .row > .span2 .tagline h3, #home #wrapper .home-splash > .row > .span2 .tagline h4 {
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+}
+#home #wrapper .home-splash > .row > .span2 .tagline h1 {
+  font-size: 40px;
+  font-weight: normal;
+  letter-spacing: 2px;
+  margin-bottom: 0;
+  line-height: 25px;
+}
+#home #wrapper .home-splash > .row > .span2 .tagline h3 {
+  font-size: 20px;
+  margin: 3px 0 0 4px;
+  padding: 0;
+  line-height: 30px;
+  letter-spacing: 1px;
+  line-height: 20px;
+}
+#home #wrapper .home-splash > .row > .span2 .tagline h4 {
+  color: #a7a7a7;
+  margin: 8px 0 0 4px;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+#home #wrapper .home-splash > .row > .span2 nav ul {
+  margin: 27px 0 0 3px;
+  padding: 0;
+}
+#home #wrapper .home-splash > .row > .span2 nav ul li {
+  list-style-type: none;
+  font-family: 'ITCFranklinGothicStd-BkCd', Helvetica, Arial;
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+  letter-spacing: 1px;
+  -webkit-font-smoothing: antialiased;
+}
+#home #wrapper .home-splash > .row > .span2 nav ul li a {
+  color: #ffffff;
+}
+#home #wrapper .home-splash > .row > .span2 nav ul li a:hover {
+  color: #c3a204;
+}
+#home #wrapper .home-splash > .row > .span10 {
+  padding-left: 72px;
+}
+#home #wrapper .home-splash > .row > .span10 .tagline {
+  font-family: 'ITCFranklinGothicStd-BkCd', Helvetica, Arial;
+  color: #ffffff;
+  text-transform: uppercase;
+  padding-top: 8px;
+}
+#home #wrapper .home-splash > .row > .span10 .tagline h1, #home #wrapper .home-splash > .row > .span10 .tagline h3, #home #wrapper .home-splash > .row > .span10 .tagline h4 {
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+}
+#home #wrapper .home-splash > .row > .span10 .tagline h1 {
+  font-size: 78px;
+  font-weight: normal;
+  letter-spacing: 4px;
+  margin-bottom: 0;
+}
+#home #wrapper .home-splash > .row > .span10 .tagline h3 {
+  font-size: 30px;
+  margin: 3px 0 0 4px;
+  padding: 0;
+  line-height: 30px;
+  letter-spacing: 1px;
+}
+#home #wrapper .home-splash > .row > .span10 .tagline h4 {
+  color: #a7a7a7;
+  margin: 19px 0 0 4px;
+  font-size: 19px;
+  letter-spacing: 1px;
+}
+#home #wrapper .home-splash > .row > .span10 .tweet {
+  font-size: 13px;
+  font-style: italic;
+  width: 412px;
+  color: #d2d2d2;
+  margin-top: 34px;
+}
+#home #wrapper .home-splash > .row > .span10 .tweet img {
+  margin-bottom: 6px;
+  margin-left: 8px;
+  margin-top: 2px;
+}
+#home #wrapper .home-splash > .row > .span10 .tweet p {
+  padding-left: 5px;
+  line-height: 19px;
+}
+#home #wrapper .home-splash > .row > .span10 .tweet p a {
+  color: #d2d2d2;
+  text-decoration: underline;
+}
+#home #wrapper .home-splash > .row > .span10 .tweet .time {
+  color: #c3a204;
+  font-size: 11px;
+  display: block;
+}
+#pages header#header {
+  background: url('../images/site/background-header-global.jpg') top left no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  height: 313px;
+}
+#pages header#header .mobilemenu {
+  height: 38px;
+  background: #000000;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#pages header#header .mobilemenu .span12 {
+  font-family: 'ITCFranklinGothicStd-BkCd', Helvetica, Arial;
+  font-size: 13px;
+  text-transform: uppercase;
+  color: #ffffff;
+  position: relative;
+}
+#pages header#header .mobilemenu .span12 strong {
+  display: block;
+  margin-top: 12px;
+  margin-left: 22px;
+}
+#pages header#header .mobilemenu .span12 img.mobilemenu-toggle {
+  position: absolute;
+  right: 22px;
+  top: 0px;
+}
+#pages header#header .mobilemenu nav#nav-menu ul {
+  margin: 0 0 0 22px;
+  padding: 0;
+}
+#pages header#header .mobilemenu nav#nav-menu ul li {
+  font-family: 'ITCFranklinGothicStd-BkCd', Helvetica, Arial;
+  font-size: 13px;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  list-style-type: none;
+}
+#pages header#header .mobilemenu nav#nav-menu ul li a {
+  color: #ffffff;
+}
+#pages header#header .mobilemenu nav#nav-menu ul li a:hover, #pages header#header .mobilemenu nav#nav-menu ul li a.active, 
+#pages header#header .mobilemenu nav#nav-menu ul li.active  a {
+  color: #c3a204;
+}
+#pages header#header .mobileheader {
+  text-align: center;
+  color: #ffffff;
+  padding-top: 64px;
+}
+#pages header#header .mobileheader .tagline {
+  font-family: 'ITCFranklinGothicStd-BkCd', Helvetica, Arial;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-top: 9px;
+}
+#pages header#header .mobileheader .tagline h1, #pages header#header .mobileheader .tagline h3, #pages header#header .mobileheader .tagline h4 {
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+}
+#pages header#header .mobileheader .tagline h1 {
+  font-size: 34px;
+  font-weight: normal;
+  letter-spacing: 2px;
+  margin-bottom: 0;
+  line-height: 34px;
+}
+#pages header#header .mobileheader .tagline h3 {
+  font-size: 20px;
+  margin: 6px 0 0 4px;
+  padding: 0;
+  line-height: 20px;
+  margin-top: 0;
+  letter-spacing: 1px;
+}
+#pages header#header .mobileheader .tagline h4 {
+  color: #c2c2c2;
+  margin: 20px 0 0 4px;
+  font-size: 15px;
+  letter-spacing: 1px;
+}
+#pages header#header.about-header {
+  background: url('../images/site/background-about.jpg') top left no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover !important;
+  background-size: cover !important;
+}
+#pages header#header .header-content {
+  margin-left: 49px;
+  color: #fff;
+  padding-top: 33px;
+  width: 822px;
+}
+#pages header#header .header-content nav ul {
+  margin: 20px 0 0 3px;
+  padding: 0;
+}
+#pages header#header .header-content nav ul li {
+  list-style-type: none;
+  font-family: 'ITCFranklinGothicStd-BkCd', Helvetica, Arial;
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+  letter-spacing: 1px;
+  -webkit-font-smoothing: antialiased;
+}
+#pages header#header .header-content nav ul li a {
+  color: #ffffff;
+}
+#pages header#header .header-content nav ul li a:hover, #pages header#header .header-content nav ul li a.active, 
+#pages header#header .header-content nav ul li.active a {
+  color: #c3a204;
+}
+#pages header#header .header-content .tagline {
+  font-family: 'ITCFranklinGothicStd-BkCd', Helvetica, Arial;
+  color: #ffffff;
+  text-transform: uppercase;
+  padding-left: 35px;
+  padding-top: 112px;
+}
+#pages header#header .header-content .tagline h1, #pages header#header .header-content .tagline h3, #pages header#header .header-content .tagline h4 {
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+}
+#pages header#header .header-content .tagline h1 {
+  font-size: 78px;
+  font-weight: normal;
+  letter-spacing: 4px;
+  margin-bottom: 0;
+  margin-left: 1px;
+}
+#pages header#header .header-content .tagline h3 {
+  font-size: 30px;
+  margin: 4px 0 0 4px;
+  padding: 0;
+  line-height: 30px;
+  letter-spacing: 1px;
+}
+#pages header#header .header-content .tagline h4 {
+  color: #c2c2c2;
+  margin: 24px 0 0 4px;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+#pages section#content {
+  background: #f7f7f7;
+  /* Content Tab */
+
+}
+#pages section#content .content-wrapper {
+  background-color: #ffffff;
+  width: 1100px;
+  color: #000000;
+}
+#pages section#content .content-wrapper .right-content {
+  padding-left: 18px;
+}
+#pages section#content.services .content-wrapper {
+  padding-top: 50px;
+}
+#pages section#content.services .content-wrapper .right-content .services-tab ul {
+  margin: 0;
+  padding: 0;
+}
+#pages section#content.services .content-wrapper .right-content .services-tab ul li {
+  display: inline-block;
+  vertical-align: bottom;
+  color: #ffffff;
+  background-color: #000000;
+  width: 144px;
+  height: 115px;
+  margin-right: 3px;
+  position: relative;
+  font-family: 'ITCFranklinGothicStd-BkCd', Helvetica, Arial;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+#pages section#content.services .content-wrapper .right-content .services-tab ul li.selected {
+  height: 135px;
+  background-color: #c3a204;
+}
+#pages section#content.services .content-wrapper .right-content .services-tab ul li a {
+  color: #ffffff;
+  position: absolute;
+  left: 15px;
+  bottom: 15px;
+  padding-top:100px;
+  width:129px;
+}
+#pages section#content.services .content-wrapper .right-content .services-description {
+  padding-right: 50px;
+  margin-top: 32px;
+  margin-bottom: 80px;
+}
+#pages section#content.services .content-wrapper .right-content .services-description h2, #pages section#content.services .content-wrapper .right-content .services-description h4 {
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+}
+#pages section#content.services .content-wrapper .right-content .services-description h2 {
+  font-size: 30px;
+  line-height: 39px;
+}
+#pages section#content.services .content-wrapper .right-content .services-description h4 {
+  font-size: 17px;
+  margin-top: 30px;
+  line-height: 27px;
+  margin-bottom: 20px;
+}
+#pages section#content.services .content-wrapper .right-content .services-description p {
+	margin-bottom: 20px;
+}
+#pages section#content.services .content-wrapper .right-content .carousel {
+  margin-top: 45px;
+}
+#pages section#content.services .content-wrapper .right-content .carousel .control-wrapper {
+  text-align: center;
+  margin: 15px auto 0;
+}
+#pages section#content.services .content-wrapper .right-content .carousel .control-wrapper .carousel-control {
+  position: relative;
+  color: #C1A01D;
+  background: none;
+  opacity: 1;
+  border: none;
+  font-size: 13px;
+  left: 0;
+  margin: 0 15px;
+}
+#pages section#content.contact-list .sidebar-nav,
+#pages section#content.media .sidebar-nav {
+  font-family: 'robotoitalic', sans-serif;
+  font-size: 12px;
+  text-decoration: underline;
+  letter-spacing: 1px;
+  margin: 63px 0 0 55px;
+  display: block;
+}
+#pages section#content.contact-list .entry {
+  margin-top: 63px;
+  font-size: 14px;
+}
+#pages section#content.contact-list .entry h3.title {
+  font-size: 27px;
+  font-family: 'ITCFranklinGothicStd-BkCd', Helvetica, Arial;
+  line-height: 27px;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  font-weight: normal;
+  letter-spacing: 1px;
+}
+#pages section#content.contact-list .entry .print-nav {
+  font-family: 'robotoitalic', sans-serif;
+  font-size: 12px;
+  text-decoration: underline;
+  letter-spacing: 1px;
+  background: url('../images/site/print.jpg') 100% 100% no-repeat;
+  padding-right: 27px;
+  position: relative;
+  top: 5px;
+  left: 10px;
+}
+#pages section#content.contact-list .entry section.contact-description {
+  margin-top: 36px;
+  padding-right: 48px;
+}
+#pages section#content.contact-list .entry section.contact-description header h3 {
+  margin: 0;
+  font-family: 'robotoregular', sans-serif;
+  font-size: 23px;
+  font-weight: normal;
+  line-height: 23px;
+}
+#pages section#content.contact-list .entry section.contact-description header .detail {
+  font-size: 16px;
+  margin-top: 5px;
+  margin-bottom: 34px;
+  display: block;
+  line-height: 24px;
+}
+#pages section#content.contact-list .entry section.contact-description header img {
+  margin-left: 2px;
+}
+#pages section#content.contact-list .entry section.contact-description header ul.feature-list {
+  margin: 25px 0 0 66px;
+  padding: 0;
+}
+#pages section#content.contact-list .entry section.contact-description header ul.feature-list li {
+  list-style-type: none;
+  margin-bottom: 14px;
+}
+#pages section#content.contact-list .entry section.contact-description .content h5 {
+  font-family: 'robotomedium', sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  margin: 36px 0 20px 0;
+  line-height: 16px;
+}
+#pages section#content.contact-list .entry section.contact-description .content div.featured-image-list {
+  margin-bottom: 35px;
+}
+#pages section#content.contact-list .entry section.contact-description .content p {
+  margin: 18px 0;
+  line-height: 22px;
+}
+#pages section#content.contact-list .entry section.contact-description .content table {
+  margin: 32px 0;
+  width: 100%;
+}
+#pages section#content.contact-list .entry section.contact-description .content table tr th {
+  font-family: 'robotomedium', sans-serif;
+  font-weight: normal;
+  text-align: left;
+  font-size: 14px;
+}
+#pages section#content.contact-list .entry section.contact-description .content table tr th:first-child {
+  width: 45%;
+}
+#pages section#content.contact-list .entry section.contact-description .content table tr th:nth-child(2) {
+  width: 23.5%;
+}
+#pages section#content.contact-list .entry section.contact-description .content table tr th:nth-child(3) {
+  width: 20.5%;
+}
+#pages section#content.contact-list .entry section.contact-description .content table tr td {
+  font-size: 14px;
+  text-align: left;
+  padding: 6px 0;
+}
+#pages section#content.contact-list .entry section.contact-description .content .contact-info {
+  line-height: 22px;
+}
+#pages section#content.contact-list .entry section.contact-description .content .contact-info h5 {
+  margin: 0 0 8px;
+}
+#pages section#content.contact-list .entry section.contact-description .content .contact-print {
+  top: 42px;
+  left: 50px;
+}
+#pages section#content.contact-list .entry section.contact-description .content .contact-form.row-fluid {
+  margin-top: 90px;
+}
+#pages section#content.contact-list .entry section.contact-description .content .contact-form.row-fluid > .span8 {
+  margin-left: 0;
+}
+#pages section#content.contact-list .entry section.contact-description .content .contact-form.row-fluid > .span8 .wrapper {
+  max-width: 98%;
+}
+#pages section#content.contact-list .entry section.contact-description .content .contact-form.row-fluid > .span8 .wrapper p:first-child {
+  margin-top: 0;
+}
+#pages section#content.contact-list .entry section.contact-description .content .contact-form.row-fluid > .span8 .wrapper form {
+  margin-top: 25px;
+}
+#pages section#content.contact-list .entry section.contact-description .content .contact-form.row-fluid > .span8 .wrapper form input, #pages section#content.contact-list .entry section.contact-description .content .contact-form.row-fluid > .span8 .wrapper form textarea {
+  background: #f5f5f5;
+  border: 0;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  width: 92%;
+  padding: 12px;
+  margin-bottom: 18px;
+  color: #919191;
+  font-family: 'robotolight', sans-serif;
+  font-size: 13px;
+}
+#pages section#content.contact-list .entry section.contact-description .content .contact-form.row-fluid > .span8 .wrapper form input[type=submit], #pages section#content.contact-list .entry section.contact-description .content .contact-form.row-fluid > .span8 .wrapper form textarea[type=submit] {
+  font-family: 'ITCFranklinGothicStd-BkCd', Helvetica, Arial;
+  font-size: 21px;
+  color: #ffffff;
+  background: #c3a204;
+  max-width: 188px;
+  padding-top: 15px;
+  padding-bottom: 8px;
+  -webkit-font-smoothing: antialiased;
+}
+#pages section#content.contact-list .entry section.contact-description .content .contact-form.row-fluid > .span8 .wrapper form input[type=submit]:hover, #pages section#content.contact-list .entry section.contact-description .content .contact-form.row-fluid > .span8 .wrapper form textarea[type=submit]:hover {
+  background: #947b05;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+#pages section#content.contact-list .entry section.contact-description .content .contact-form.row-fluid > .span8 .wrapper form textarea {
+  height: 130px;
+}
+#pages section#content.contact-list .entry section.contact-description .content .contact-form.row-fluid > .span4 .wrapper {
+  margin-left: 20px;
+  font-size: 13px;
+  line-height: 18px;
+}
+#pages section#content.contact-list .entry section.contact-description .content .contact-form.row-fluid > .span4 .wrapper strong {
+  display: block;
+  font-family: 'ITCFranklinGothicStd-MdCd', Helvetica, Arial;
+  font-weight: normal;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-top: 25px;
+}
+#pages section#content.contact-list .entry section.contact-description .content .contact-form.row-fluid > .span4 .wrapper strong:first-child {
+  margin-top: 0;
+}
+#pages section#content.contact-list .entry section.contact-description .content .contact-form.row-fluid > .span4 .wrapper a {
+  text-decoration: underline;
+}
+#pages section#content.contact-list .entry section.contact-description .content .contact-form.row-fluid > .span4 .wrapper ul.sidebar-socmed {
+  margin: 32px 0 0;
+}
+#pages section#content.contact-list .entry section.contact-description .content .contact-form.row-fluid > .span4 .wrapper ul.sidebar-socmed li {
+  display: inline-block;
+  list-style-type: none;
+}
+#pages section#content.contact-list .entry section.contact-description .content .contact-form.row-fluid > .span4 .wrapper ul.sidebar-socmed li a {
+  display: inline-block;
+  background: url('../images/site/socmed_grey.jpg') top left no-repeat;
+  width: 30px;
+  height: 30px;
+  text-decoration: none;
+  margin-right: 7px;
+}
+#pages section#content.contact-list .entry section.contact-description .content .contact-form.row-fluid > .span4 .wrapper ul.sidebar-socmed li a:hover {
+  background: url('../images/site/socmed_color.jpg') top left no-repeat;
+}
+#pages section#content.contact-list .entry section.contact-description .content .contact-form.row-fluid > .span4 .wrapper ul.sidebar-socmed li a.facebook {
+  background-position: -40px;
+}
+#pages section#content.contact-list .entry section.contact-description .content .contact-form.row-fluid > .span4 .wrapper ul.sidebar-socmed li a.linkedin {
+  background-position: -80px;
+}
+#pages section#content.contact-list .entry section.contact-description footer {
+  margin-top: 20px;
+}
+#pages section#content.contact-list .entry section.contact-description footer section {
+  background: url('../images/site/line-separator.jpg') top left repeat-x;
+  padding: 30px 0 65px;
+}
+#pages section#content.contact-list .entry section.contact-description footer section h4 {
+  line-height: 24px;
+  font-family: 'ITCFranklinGothicStd-BkCd', Helvetica, Arial;
+  font-size: 22px;
+  text-transform: uppercase;
+  font-weight: normal;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+#pages section#content.contact-list .entry section.contact-description footer section h4.twitter-stream-header {
+  background: url('../images/site/icon_twitter-black.jpg') top left no-repeat;
+  padding-left: 30px;
+}
+#pages section#content.contact-list .entry section.contact-description footer section .span4 {
+  font-size: 13px;
+}
+#pages section#content.contact-list .entry section.contact-description footer section .span4:first-child .wrapper {
+  margin-left: 0;
+}
+#pages section#content.contact-list .entry section.contact-description footer section .span4 .wrapper {
+  display: block;
+  margin-left: 20px;
+}
+#pages section#content.contact-list .entry section.contact-description footer section .span4 .wrapper strong {
+  display: block;
+  font-family: 'ITCFranklinGothicStd-MdCd', Helvetica, Arial;
+  font-weight: normal;
+  font-size: 12px;
+}
+#pages section#content.contact-list .entry section.contact-description footer section.news-grid .span6 {
+  max-width: 98%;
+}
+#pages section#content.contact-list .entry section.contact-description footer section.news-grid .span6:first-child .wrapper {
+  margin-left: 0;
+}
+#pages section#content.contact-list .entry section.contact-description footer section.news-grid .span6 .wrapper {
+  margin-left: 25px;
+}
+#pages section#content.contact-list .entry section.contact-description footer section.news-grid .span6 .wrapper span {
+  display: block;
+  margin-bottom: 20px;
+}
+#pages section#content.contact-list .entry section.contact-description footer section.news-grid .span6 .wrapper span strong, #pages section#content.contact-list .entry section.contact-description footer section.news-grid .span6 .wrapper span a {
+  display: block;
+  font-family: 'ITCFranklinGothicStd-MdCd', Helvetica, Arial;
+  font-weight: normal;
+  font-size: 12px;
+}
+#pages section#content.about-us .content-wrapper {
+  padding-top: 65px;
+}
+#pages section#content.about-us .right-content > section:not(:first-child) header nav.about-nav ul {
+  padding-top: 50px;
+}
+#pages section#content.about-us .right-content > section header nav.about-nav ul {
+  margin: 0;
+}
+#pages section#content.about-us .right-content > section header nav.about-nav ul li {
+  display: inline-block;
+  font-family: 'ITCFranklinGothicStd-BkCd', Helvetica, Arial;
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-right: 38px;
+}
+#pages section#content.about-us .right-content > section header nav.about-nav ul li a {
+  color: #000000;
+}
+#pages section#content.about-us .right-content > section header nav.about-nav ul li a.active, #pages section#content.about-us .right-content > section header nav.about-nav ul li a:hover {
+  color: #c3a204;
+}
+#pages section#content.about-us .right-content > section#affiliations .content {
+  margin-top: 46px;
+}
+#pages section#content.about-us .right-content > section#affiliations .content .entry {
+  margin-bottom: 50px;
+}
+#pages section#content.about-us .right-content > section#affiliations .content .entry .row-fluid .span8 {
+  margin-left: 0;
+}
+#pages section#content.about-us .right-content > section#affiliations .content .entry .row-fluid .span8 h4 {
+  font-size: 31px;
+  line-height: 31px;
+  font-weight: normal;
+  margin: 0;
+}
+#pages section#content.about-us .right-content > section#affiliations .content .entry .row-fluid .span8 h6 {
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: normal;
+  margin: 5px 0 18px ;
+}
+#pages section#content.about-us .right-content > section#affiliations .content .entry .row-fluid .span8 a {
+  font-size: 12px;
+}
+#pages section#content.about-us .right-content > section#affiliations .content .entry .row-fluid .span8 .socmed {
+  display: block;
+  margin-bottom: 16px;
+}
+#pages section#content.about-us .right-content > section#affiliations .content .entry .row-fluid .span8 .socmed a {
+  display: inline-block;
+  padding: 0 8px;
+}
+#pages section#content.about-us .right-content > section#affiliations .content .entry .row-fluid .span8 .socmed a:first-child {
+  padding-left: 0;
+}
+#pages section#content.about-us .right-content > section#affiliations .content .entry .row-fluid .span8 .view-listing-nav {
+  font-family: 'robotolight_italic', sans-serif;
+  text-decoration: underline;
+}
+#pages section#content.about-us .right-content > section#team .content .team-list {
+  margin: 0;
+  width: 100%;
+}
+#pages section#content.about-us .right-content > section#team .content .team-list > li {
+  display: inline-block;
+  width: 32%;
+  text-align: left;
+  margin-right: 1%;
+  vertical-align: top;
+  font-size: 13px;
+  color: #7d7d7d;
+  font-family: 'robotolight_italic', sans-serif;
+  margin-bottom: 45px;
+}
+#pages section#content.about-us .right-content > section#team .content .team-list > li .profile-image {
+  cursor: pointer;
+  display: block;
+  width: 144px;
+  height: 144px;
+  background-repeat: no-repeat !important;
+  background-position: 50% 10% !important;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+#pages section#content.about-us .right-content > section#team .content .team-list > li h6.name {
+  font-family: 'ITCFranklinGothicStd-BkCd', Helvetica, Arial;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: normal;
+  margin: 16px 0 0 0;
+  line-height: 18px;
+  color: #000000;
+}
+#pages section#content.about-us .right-content > section#team .content .team-list > li ul.small-socmed {
+  margin: 10px auto 0;
+}
+#pages section#content.about-us .right-content > section#team .content .team-list > li ul.small-socmed li {
+  display: inline-block;
+  list-style-type: none;
+  vertical-align: top;
+}
+#pages section#content.about-us .right-content > section#team .content .team-list > li ul.small-socmed li a {
+  background: url('../images/site/small_socmed.jpg') top left no-repeat;
+  width: 15px;
+  display: block;
+  height: 10px;
+}
+#pages section#content.about-us .right-content > section#team .content .team-list > li ul.small-socmed li a.twitter {
+	background-position: -15px;
+}
+#pages section#content.about-us .right-content > section#team .content .team-list > li ul.small-socmed li a.linkedin {
+  background-position: -34px;
+}
+
+#pages section#content.about-us .right-content > section#team .content .team-list > li ul.small-socmed li a.facebook {
+  background-position: 0px;
+}
+#pages section#content.about-us .right-content > section .content {
+  margin-top: 26px;
+  padding-right: 48px;
+}
+#pages section#content.about-us .right-content > section .content h2 {
+  font-weight: normal;
+  font-size: 30px;
+  margin: 0;
+}
+#pages section#content.about-us .right-content > section .content h4 {
+  font-weight: normal;
+  font-size: 16px;
+  margin-top: 22px;
+  margin-bottom: 0;
+  line-height: 27px;
+}
+#pages section#content.about-us .right-content > section .content ul#timeline {
+  margin: 53px 0 0 50px;
+}
+#pages section#content.about-us .right-content > section .content ul#timeline li {
+  list-style-type: none;
+  position: relative;
+  height: 58px;
+  margin: 0;
+  background: url('../images/site/timeline_vertical.png') top left repeat-y;
+}
+#pages section#content.about-us .right-content > section .content ul#timeline li:last-child {
+  background: none !important;
+}
+#pages section#content.about-us .right-content > section .content ul#timeline li .year {
+  position: absolute;
+  font-family: 'ITCFranklinGothicStd-BkCd', Helvetica, Arial;
+  font-size: 13px;
+  left: -50px;
+}
+#pages section#content.about-us .right-content > section .content ul#timeline li .dot {
+  background: url('../images/site/timeline_circle.jpg') top left no-repeat;
+  width: 11px;
+  height: 11px;
+  position: absolute;
+  left: -5px;
+}
+#pages section#content.about-us .right-content > section .content ul#timeline li .line {
+  display: inline-block;
+  height: 2px;
+  background: url('../images/site/timeline_horizontal.png') top left repeat-x;
+  position: relative;
+  left: 6px;
+  vertical-align: top;
+  top: 4px;
+}
+#pages section#content.about-us .right-content > section .content ul#timeline li .line.one {
+  width: 40px;
+}
+#pages section#content.about-us .right-content > section .content ul#timeline li .line.two {
+  width: 54px;
+}
+#pages section#content.about-us .right-content > section .content ul#timeline li .line.three {
+  width: 63px;
+}
+#pages section#content.about-us .right-content > section .content ul#timeline li .line.four {
+  width: 83px;
+}
+#pages section#content.about-us .right-content > section .content ul#timeline li .profile {
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  vertical-align: top;
+  position: relative;
+  left: 3px;
+  top: -18px;
+}
+#pages section#content.about-us .right-content > section .content ul#timeline li .profile.no-block {
+  background-color: #c3a204 !important;
+}
+#pages section#content.about-us .right-content > section .content ul#timeline li .profile.starbucks {
+  background-color: #09692c !important;
+}
+#pages section#content.about-us .right-content > section .content ul#timeline li .profile.wallmart {
+  background-color: #257ec4 !important;
+}
+#pages section#content.about-us .right-content > section .content ul#timeline li .text {
+  font-size: 12px;
+  color: #686868;
+  position: relative;
+  left: 15px;
+  top: -8px;clear: both;
+  display: inline-block;
+  width: 78%;
+  line-height: 15px;
+  vertical-align: middle;
+}
+#pages section#content.about-us .right-content > section footer {
+  display: block;
+  margin-top: 50px;
+  margin-bottom: 164px;
+}
+#pages section#content.about-us .right-content > section footer .arrow-down {
+  font-family: 'ITCFranklinGothicStd-BkCd', Helvetica, Arial;
+  font-size: 11px;
+  text-transform: uppercase;
+  background: url('../images/site/arrow.png') top left no-repeat;
+  height: 21px;
+  display: block;
+  padding-left: 13px;
+  padding-top: 2px;
+  margin-left: 3px;
+}
+#pages section#content.about-us .right-content > section footer .arrow-down.top {
+  background: url('../images/site/arrow-up.jpg') top left no-repeat;
+}
+#pages section#content.clients .tab-clients-nav {
+  margin: 28px 0 26px;
+  padding: 0;
+  width: 788px;
+  text-align: center;
+}
+#pages section#content.clients .tab-clients-nav li {
+  display: inline-block;
+  list-style-type: none;
+  font-family: 'ITCFranklinGothicStd-BkCd', Helvetica, Arial;
+  font-size: 20px;
+  text-transform: uppercase;
+  margin-right: 23px;
+  letter-spacing: 1px;
+}
+#pages section#content.clients .tab-clients-nav li.active a {
+  color: #c3a204;
+}
+#pages section#content.clients .tab-clients-nav li a {
+  color: #000000;
+}
+#pages section#content.clients .tab-clients-nav li a:hover, #pages section#content.clients .tab-clients-nav li a.active {
+  color: #c3a204;
+}
+#pages section.content-map {
+  background: #000000;
+}
+#pages section.content-map .row-fluid .clients-list-mobile {
+  margin-top: 20px;
+}
+#pages section.content-map .row-fluid .clients-list-mobile li {
+  list-style-type: none;
+  margin-bottom: 75px;
+}
+#pages section.content-map .row-fluid .clients-list-mobile li .clients-data {
+  width: 95%;
+}
+#pages section.content-map .row-fluid .clients-list-mobile li .clients-data span {
+  font-family: 'robotolight_italic', sans-serif;
+}
+#pages section.content-map .row-fluid .clients-list-mobile li .clients-data img {
+  display: block;
+}
+#pages section.content-map .row-fluid .clients-list-mobile li .clients-data p {
+  margin-bottom: 15px;
+}
+#pages section.content-map .row-fluid .clients-list-mobile li .clients-data p strong {
+  font-family: 'robotoregular', sans-serif;
+  font-weight: normal;
+}
+#pages section.content-map .row-fluid .map-wrapper {
+  width: 788px;
+  float: left;
+  margin-left: 0;
+}
+#pages section.content-map .row-fluid .map-wrapper .map {
+  position: relative;
+}
+#pages section.content-map .row-fluid .map-wrapper .map .dot-wrapper {
+  position: relative;
+  min-height: 618px;
+  min-width: 788px;
+}
+#pages section.content-map .row-fluid .map-wrapper .map .map-dot {
+  position: absolute;
+  width: 25px;
+  height: 23px;
+  background: #c2a100;
+  font-family: 'robotobold', sans-serif;
+  font-size: 13px;
+  color: #ffffff;
+  top: 0;
+  left: 0;
+  text-align: center;
+  border-radius: 25px;
+  padding-top: 2px;
+  cursor: pointer;
+  /*.transition(.2s, linear);*/
+
+}
+#pages section.content-map .row-fluid .map-wrapper .map .map-dot:hover {
+  background: #947b05;
+}
+#pages section.content-map .row-fluid .clients-wrapper {
+  background: #000000;
+  height: 100%;
+  color: #ffffff;
+  float: left;
+  width: 20% !important;
+}
+
+#pages section.content-map .row-fluid .clients-wrapper.clients-wrapper-tablet {
+	background: white;
+	float: none;
+	display: none;
+}
+#pages section.content-map .row-fluid .clients-wrapper.clients-wrapper-tablet .clients-list {
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-bottom: 50px;
+}
+#pages section.content-map .row-fluid .clients-wrapper .clients-list {
+  padding: 34px 0 0 35px;
+}
+#pages section.content-map .row-fluid .clients-wrapper .clients-list h3 {
+  margin: 0 0 20px 0;
+  font-family: 'ITCFranklinGothicStd-BkCd', Helvetica, Arial;
+  font-size: 27px;
+  line-height: 27px;
+  text-transform: uppercase;
+  color: #c3a204;
+  font-weight: normal;
+  letter-spacing: 1px;
+}
+#pages section.content-map .row-fluid .clients-wrapper .clients-list ul {
+  margin: 0;
+}
+#pages section.content-map .row-fluid .clients-wrapper .clients-list ul li {
+  list-style-type: none;
+  margin-bottom: 7px;
+}
+#pages section.content-map .row-fluid .clients-wrapper .clients-list .tenants-tablet {
+  display: none;
+}
+#pages section.content-map .row-fluid .clients-wrapper .clients-list .tenants-tablet .left, #pages section.content-map .row-fluid .clients-wrapper .clients-list .tenants-tablet .right {
+  display: inline-block;
+  vertical-align: top;
+  width: 45%;
+}
+#pages footer#empty {
+  background: url('../images/site/footer_yellow.jpg') top left repeat-x;
+  height: 25px;
+}
+#pages footer#words {
+  background: url('../images/site/footer_yellow.jpg') top left repeat-x;
+  height: 203px;
+}
+#pages footer#words div.span9 {
+  margin-left: 0;
+}
+#pages footer#words div.span9 p {
+  font-size: 23px;
+  line-height: 38px;
+  font-family: 'robotolight_italic', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  margin-top: 45px;
+  max-width: 620px;
+}
+#pages footer#words div.span9 p.name {
+  margin-top: 0;
+  font-family: 'ITCFranklinGothicStd-BkCd', Helvetica, Arial;
+  font-size: 19px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+#pages footer#footer {
+  background: url('../images/site/footer_black.jpg') top left no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  height: 177px;
+}
+#pages footer#footer .footer-content {
+  margin-left: 50px;
+  color: #fff;
+  padding-top: 75px;
+  width: 510px;
+}
+#pages footer#footer .footer-content nav ul {
+  margin: 0;
+  padding: 0;
+}
+#pages footer#footer .footer-content nav ul li {
+  display: inline-block;
+  list-style-type: none;
+  font-family: 'ITCFranklinGothicStd-BkCd', Helvetica, Arial;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  margin-right: 17px;
+}
+#pages footer#footer .footer-content nav ul li span {
+  padding-right: 16px;
+  display: inline-block;
+  color: #8b8b8b;
+}
+#pages footer#footer .footer-content nav ul li a {
+  color: #ffffff;
+}
+#pages footer#footer .footer-content nav ul li a:hover {
+  color: #c3a204;
+}
+#pages footer#footer .footer-content .copyright {
+  font-size: 10px;
+  color: #d9d9d9;
+}
+/* Bootstrap popover override */
+.clients-page .popover {
+  width: auto;
+  max-width: none;
+}
+.clients-page .tab-content {
+  overflow: visible;
+  background: #000000;
+}
+.popover {
+  background: black;
+  border-radius: 0;
+  box-shadow: none;
+  color: #ffffff;
+  padding: 19px;
+  font-size: 12px;
+  line-height: 17px;
+  max-width: 350px;
+  width: 350px;
+  margin-top: -15px;
+}
+.popover .popover-inner .popover-title {
+  display: none;
+}
+.popover .popover-inner .popover-content {
+  padding: 0;
+}
+.popover .popover-inner .popover-content .tenants-data {
+  width: 229px;
+  min-height: 151px;
+}
+.popover .popover-inner .popover-content .tenants-data h5 {
+  font-size: 27px;
+  line-height: 32px;
+  margin-bottom: 15px;
+}
+.popover .popover-inner .popover-content .tenants-data p {
+  margin: 8px 0;
+}
+.popover .popover-inner .popover-content .clients-data {
+  width: 462px;
+  min-height: 284px;
+}
+.popover .popover-inner .popover-content .clients-data img {
+  margin-bottom: 10px;
+}
+.popover .popover-inner .popover-content .clients-data .floatright {
+  float: right;
+  margin-left: 10px;
+  margin-bottom: 0px;
+}
+.popover .popover-inner .popover-content .clients-data .popover-close {
+  right: 20px;
+  bottom: 20px;
+  top: auto;
+}
+.popover .popover-inner .popover-content .clients-data p {
+  margin-bottom: 15px;
+}
+.popover .popover-inner .popover-content .clients-data p strong {
+  font-family: 'robotoregular', sans-serif;
+  font-weight: normal;
+}
+.popover .popover-inner .popover-content .clients-data .socmed a.twitter {
+  margin-right: 0;
+}
+.popover .popover-inner .popover-content h5 {
+  color: #c3a204;
+  margin: 8px 0 0 0;
+  font-family: 'ITCFranklinGothicStd-BkCd', Helvetica, Arial;
+  font-size: 18px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+.popover .popover-inner .popover-content span {
+  color: #ababab;
+  font-size: 13px;
+  font-family: 'robotolight_italic', sans-serif;
+  display: block;
+}
+.popover .popover-inner .popover-content .socmed {
+  display: block;
+  margin-top: 12px;
+}
+.popover .popover-inner .popover-content .socmed a {
+  display: inline-block;
+}
+.popover .popover-inner .popover-content .socmed a.url {
+  background: url('../images/site/popup_socmed.jpg') top left no-repeat;
+  width: 16px;
+  height: 18px;
+  position: relative;
+  top: 1px;
+}
+.popover .popover-inner .popover-content .socmed a.facebook {
+  background: url('../images/site/popup_socmed.jpg') top left no-repeat;
+  width: 16px;
+  height: 18px;
+  position: relative;
+  background-position: -38px;
+  margin-right: 2px;
+  top: 1px;
+}
+.popover .popover-inner .popover-content .socmed a.pinterest {
+  background: url('../images/site/popup_socmed.jpg') top left no-repeat;
+  width: 16px;
+  height: 18px;
+  position: relative;
+  background-position: -60px;
+  margin-right: 2px;
+  top: 1px;
+}
+.popover .popover-inner .popover-content .socmed a.youtube {
+  background: url('../images/site/popup_socmed.jpg') top left no-repeat;
+  width: 16px;
+  height: 18px;
+  position: relative;
+  background-position: -82px;
+  top: 1px;
+}
+.popover .popover-inner .popover-content .socmed a.twitter {
+  background: url('../images/site/popup_socmed.jpg') top left no-repeat;
+  width: 16px;
+  height: 16px;
+  background-position: -19px;
+  margin-right: 15px;
+  position: relative;
+  top: 1px;
+}
+.popover .popover-inner .popover-content .socmed a.linkedin {
+  background: url('../images/site/linkedin_white.jpg') top left no-repeat;
+  width: 16px;
+  margin-right: 5px;
+  height: 16px;
+}
+.popover .popover-inner .popover-content .popover-close {
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  background: url('../images/site/popup_close.jpg') top left no-repeat;
+  top: 20px;
+  right: 20px;
+  -moz-opacity: 1;
+  -khtml-opacity: 1;
+  -webkit-opacity: 1;
+  opacity: 1;
+  z-index: 9;
+  cursor: pointer;
+  display: block;
+}
+.popover.top .arrow {
+  border-top-color: black;
+}
+.popover.right {
+  margin-top: 0;
+  margin-left: 15px;
+}
+.popover.right .arrow {
+  border-right-color: black;
+}
+.popover.left {
+  margin-top: 0;
+  margin-left: -15px;
+}
+.popover.left .arrow {
+  border-left-color: black;
+}
+
+/* Media */
+#twitter-widget-0 { 
+  width: 90%; 
+}
+
+#pages section#content.media .tweet-timeline {
+  padding-top: 63px;
+}
+
+#pages section#content.media .right-content .entry > section > header > h1 {
+  font-size: 32px;
+  font-family: 'ITCFranklinGothicStd-BkCd', Helvetica, Arial;
+  line-height: 32px;
+  text-transform: uppercase;
+  font-weight: normal;
+  letter-spacing: 1px; 
+  -webkit-font-smoothing: antialiased;
+}
+
+#pages section#content.media .tweet-timeline > header > h1 img  {
+	position: relative;
+	top: -5px;
+	left: 17px;
+}
+
+#pages section#content.media .tweet-timeline > .content {
+  margin-top: 30px;
+  height: 220px;
+  overflow: hidden;
+  padding-bottom: 40px;
+}
+
+#pages section#content.media .all-media {
+  margin-top: 73px;
+  width: 93%; 
+}
+
+#pages section#content.media .all-media > header {
+  padding-bottom: 28px;
+  background: url('../images/site/line-separator.jpg') bottom left repeat-x;
+  margin-bottom: 45px;
+}
+
+#pages section#content.media .all-media > .content .item-post {
+  border-bottom: 1px solid #d7d7d7;
+  padding-bottom: 40px;
+  padding-top: 60px;
+}
+
+#pages section#content.media .all-media > .content .item-post:first-child {
+  padding-top: 0;
+}
+
+#pages section#content.media .all-media > .content .item-post .meta {
+  font-size: 14px;
+}
+
+#pages section#content.media .all-media > .content .item-post h3 {
+  font-size: 30px;
+  line-height: 39px;
+  font-weight: lighter;
+  margin-top: 4px;
+  margin-bottom: 22px;
+}
+
+#pages section#content.media .all-media > .content .item-post p {
+  font-size: 15px;
+  line-height: 27px;
+}
+
+#pages section#content.media .all-media > .content .item-post .button-read-more {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #fff;
+  background: #c3a204;
+  display: inline-block;
+  padding: 12px 20px;
+  margin-top: 19px;
+  margin-left: 1px;
+}
+
+#pages section#content.media .all-media > .content .item-post > img {
+  margin-bottom: 7px;
+  display: block;
+}
+
+#pages section#content.media.media-single .all-media > .content .item-post > h3 {
+  margin-bottom: 33px;
+}
+
+#pages section#content.media.media-single .all-media > .content .item-post > p {
+  margin-bottom: 27px;
+}
+
+#pages section#content.media .all-media > .content .paging {
+	display: block;
+}
+
+#pages section#content.media .all-media > .content .paging {
+  margin:  42px 0 67px -5px;
+}
+
+#pages section#content.media .all-media > .content .paging li {
+  list-style-type: none;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 9px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#pages section#content.media .all-media > .content .paging li a {
+  color: rgba(0,0,0,0.3);
+  font-size: 15px;
+  padding: 3px 10px 3px 9px;
+  border-radius: 40px;
+}
+
+#pages section#content.media .all-media > .content .paging li a:hover {
+  color: #000;
+}
+
+#pages section#content.media .all-media > .content .paging li a.active {
+  background: #c3a204;
+  color: #fff;
+}
+
+#pages section#content.media .all-media > .content .paging li a img {
+  position: relative;
+  top: -2px;
+}
+
+#pages section#content.media .all-media > .content .socmed {
+  font-family: 'robotoregular';
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #000;
+  padding: 38px 0 38px 5px;
+  border-bottom: 1px solid #d7d7d7;
+}
+
+#pages section#content.media .all-media > .content .single-navigation {
+  padding-top: 45px;
+  padding-bottom: 80px;
+}
+
+#pages section#content.media .all-media > .content .single-navigation > span.next {
+	text-align: right;
+}
+
+#pages section#content.media .all-media > .content .single-navigation > span > a {
+  color: #fff;
+  font-family: 'robotoregular';
+  font-size: 14px;
+  text-transform: uppercase;
+  background: #000;
+  padding: 12px 20px;
+}
+
+@media all and (max-width: 1100px) {
+  #pages section#content .content-wrapper {
+    width: 100%;
+  }
+  #pages section#content.services .content-wrapper .right-content .services-tab ul li {
+    width: 19%;
+  }
+  #pages section#content.services .content-wrapper .right-content .services-tab {
+    padding-right: 50px;
+  }
+}
+@media all and (max-width: 1024px) {
+  #home #wrapper .home-splash > .row > .span10 .tagline {
+    padding-left: 42px;
+  }
+  #home #wrapper .home-splash > .row > .span10 .tweet {
+    padding-left: 46px;
+  }
+  #pages section#content.about-us .right-content > section#affiliations .content .entry .row-fluid .span8 {
+    margin-left: 2%;
+  }
+}
+@media all and (max-width: 994px) {
+  #home #wrapper .home-splash > .row > .span2 {
+    width: 18%;
+  }
+  #home #wrapper .home-splash > .row > .span10 {
+    width: 75%;
+  }
+}
+@media all and (max-width: 984px) {
+  #pages section.content-map .row-fluid .map-wrapper {
+    width: 100%;
+    display: block;
+    float: none;
+    background: #000000;
+  }
+  #pages section.content-map .row-fluid .clients-wrapper {
+    background: #ffffff;
+    width: 100% !important;
+    color: #000000;
+    display: none;
+  }
+  #pages section.content-map .row-fluid .clients-wrapper.clients-wrapper-tablet {
+    display: block;
+  }
+  #pages section.content-map .row-fluid .clients-wrapper .clients-list {
+    margin: 45px 0 0 110px;
+    margin-bottom: 100px;
+  }
+  #pages section.content-map .row-fluid .clients-wrapper .clients-list .tenants-desktop {
+    display: none;
+  }
+  #pages section.content-map .row-fluid .clients-wrapper .clients-list .tenants-tablet {
+    display: block;
+  }
+  #pages section.content-map .row-fluid .clients-wrapper {
+    height: auto !important;
+  }
+}
+@media all and (max-width: 980px) {
+  #home #wrapper .home-splash > .row > .span10 .tagline h1 {
+    font-size: 63px;
+  }
+  #home #wrapper .home-splash > .row > .span10 .tagline h3 {
+    font-size: 24px;
+  }
+  #home #wrapper .home-splash > .row > .span10 .tagline h4 {
+    font-size: 13px;
+  }
+  #pages header#header .header-content {
+    width: auto;
+  }
+  #pages section#content.about-us .right-content > section .content ul#timeline li .text {
+    font-size: 11px;
+    width: 70%;
+  }
+  #pages section#content.about-us .right-content > section#team .content .team-list > li {
+    width: 30%;
+  }
+}
+@media all and (max-width: 846px) {
+  #home #wrapper .home-splash > .row > .span2 {
+    width: 20%;
+  }
+  #home #wrapper .home-splash > .row > .span10 {
+    padding-left: 20px;
+  }
+  #pages header#header .header-content .tagline h1 {
+    font-size: 64px;
+  }
+  #pages header#header .header-content .tagline h3 {
+    font-size: 25px;
+  }
+  #pages header#header .header-content .tagline h4 {
+    font-size: 18px;
+  }
+  #pages section#content .content-wrapper .right-content {
+    width: auto;
+    margin-left: 0;
+    display: block;
+    float: none;
+    padding-left: 53px;
+    padding-right: 53px;
+  }
+  #pages section#content.about-us .right-content > section#team .content .team-list > li {
+    width: 32%;
+  }
+  #pages footer#words div.span3, #pages section#content.services .content-wrapper .span3, #pages section#content.about-us .content-wrapper .span3 {
+    display: none;
+  }
+  #pages footer#words div.span9 {
+    width: 100%;
+    padding-left: 53px;
+    padding-right: 53px;
+  }
+  #pages section#content.services .content-wrapper .right-content .services-tab, #pages section#content.services .content-wrapper .right-content .services-description {
+    padding-right: 0px;
+  }
+}
+@media all and (max-width: 822px) {
+  #home #wrapper .home-splash > .row > .span10 .tweet p {
+    font-size: 12px;
+  }
+}
+
+@media all and (max-width: 816px) {
+	#pages header#header .header-content {
+		margin-left: 0;
+	}
+	#pages header#header .header-content > .span3 {
+		margin-left: 49px;
+	}
+	#pages header#header .header-content > .span9 {
+		width: auto;
+	}
+	#pages section#content.clients .tab-clients-nav {
+		width: 100%;
+	}
+}
+
+@media all and (max-width: 787px) {
+	#pages section.content-map .row-fluid .map-wrapper .map .dot-wrapper {
+		min-height: 500px;
+		width: 100% !important;
+		max-height: 602px;
+		min-width: 100%;
+	}
+}
+
+@media all and (max-width: 768px) {
+  #pages header#header .header-content {
+    width: 100%;
+  }
+  #home #wrapper .home-splash > .row > .span2 nav ul li {
+    margin-bottom: 6px;
+  }
+  #home #wrapper .home-splash > .row > .span2 .top-logo {
+    max-width: 50%;
+  }
+  #pages {
+    overflow-x: hidden;
+  }
+  #pages section#content.about-us .right-content > section footer {
+  	margin-bottom: 54px;
+  }
+  #pages section#content .content-wrapper .span3, #pages section#content .content-wrapper .right-content {
+    width: 100%;
+    display: block;
+    float: none;
+    padding-left: 53px;
+    padding-right: 53px;
+  }
+  #pages section#content.services .content-wrapper .right-content .services-tab ul li {
+    font-size: 14px;
+    height: 104px;
+  }
+  #pages section#content.services .content-wrapper .right-content .services-tab ul li.selected {
+    height: 122px;
+  }
+  #pages header#header .header-content .span3 {
+    display: inline;
+    float: left;
+    width: 22%;
+  }
+  #pages header#header .header-content .span9 {
+    display: inline;
+    float: left;
+    width: auto;
+  }
+  #pages section#content.about-us .right-content > section .content {
+    padding-right: 0;
+  }
+  #pages section#content.about-us .right-content > section .content ul#timeline li .text {
+    font-size: 12px;
+  }
+  #pages section#content.contact-list .sidebar-nav,
+  #pages section#content.media .sidebar-nav {
+    margin: 35px 0 0;
+  }
+  #pages section#content.contact-list .entry {
+    margin-top: 28px;
+  }
+  #pages section#content.contact-list .entry h3.title {
+    font-size: 37px;
+    line-height: 37px;
+  }
+  #pages section#content.contact-list .entry section.contact-description {
+    padding-right: 0;
+  }
+  #pages section#content.contact-list .entry section.contact-description header ul.feature-list {
+    font-size: 18px;
+  }
+  #pages section#content.contact-list .entry section.contact-description .content p, #pages section#content.contact-list .entry section.contact-description .content .contact-info {
+    font-size: 16px;
+    line-height: 27px;
+  }
+  #pages section#content.contact-list .entry section.contact-description footer section.news-grid .span6 {
+    margin-left: 0;
+  }
+}
+@media all and (max-width: 767px) {
+  body {
+    padding: 0;
+  }
+  #pages header#header .mobilemenu {
+    position: fixed;
+    z-index: 9999;
+  }
+  #home #wrapper .home-splash {
+    padding-left: 0;
+  }
+  #home #wrapper .home-splash > .row > .span2, #home #wrapper .home-splash > .row > .span10 {
+    margin: 0 auto;
+    text-align: center;
+  }
+  #home #wrapper .home-splash > .row > .span10 .tweet {
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    width: 100%;
+  }
+  #home #wrapper .home-splash > .row > .span2 .top-logo {
+    max-width: 100%;
+  }
+  #home #wrapper .home-splash {
+    background: none;
+    margin-top: 20%;
+  }
+  #home #wrapper .home-splash > .row > .span2 nav ul li a {
+    font-size: 15px;
+  }
+  #home #wrapper .home-splash > .row > .span2 {
+    width: 100%;
+  }
+  #pages header#header {
+    height: 264px;
+  }
+  #pages section#content.services .content-wrapper .right-content .services-tab ul li {
+    width: 30%;
+    margin-bottom: 5px;
+  }
+  #pages section#content.services .content-wrapper .right-content .services-description {
+    padding-right: 0;
+  }
+  #pages section#content.about-us .right-content > section#affiliations .content .entry .row-fluid .span4 {
+    display: none;
+  }
+  #pages section#content.about-us .right-content > section#affiliations .content .entry .row-fluid .span8 {
+    margin-left: 0 ;
+  }
+  #pages section#content.about-us .right-content > section .content ul#timeline li {
+    background: none;
+  }
+  #pages section#content.about-us .right-content > section .content ul#timeline li .dot, #pages section#content.about-us .right-content > section .content ul#timeline li .line {
+    display: none;
+  }
+  #pages section#content.about-us .right-content > section#team .content .team-list > li {
+    width: 30%;
+  }
+  #pages section#content.about-us .right-content > section .content ul#timeline li .profile {
+    vertical-align: middle;
+  }
+  #pages section#content.about-us .right-content > section .content ul#timeline li .text {
+    display: inline-block;
+    vertical-align: middle;
+    width: 80%;
+    top: -18px;
+    line-height: 15px;
+  }
+  #pages section#content.about-us .right-content > section#team .content .team-list > li {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 40px;
+  }
+  #pages section#content.about-us .right-content > section#team .content .team-list > li .left {
+    display: inline-block;
+    vertical-align: top;
+    width: 100px;
+  }
+  #pages section#content.about-us .right-content > section#team .content .team-list > li .right {
+    display: inline-block;
+    vertical-align: top;
+    width: 55%;
+    margin-left: 3%;
+  }
+  #pages section#content.about-us .right-content > section#team .content .team-list > li .profile-image {
+    width: 100px;
+    height: 100px;
+    -webkit-background-size: cover !important;
+    -moz-background-size: cover !important;
+    background-size: cover !important;
+    margin: 0;
+  }
+  #pages section#content.about-us .right-content > section#team .content .team-list > li p {
+    font-family: 'robotolight', sans-serif;
+    font-size: 13px;
+    color: #000000;
+    margin-top: 15px;
+  }
+  #pages section#content.contact-list .entry section.contact-description footer section.news-grid .span6 .wrapper, #pages section#content.contact-list .entry section.contact-description footer section .span4 .wrapper {
+    margin-left: 0;
+  }
+  #pages section#content.contact-list .entry section.contact-description footer section .span4:not(:last-child) {
+    margin-bottom: 60px;
+  }
+  #pages section#content.contact-list .entry section.contact-description .content .contact-print, #pages section#content.contact-list .entry .print-nav {
+    display: none;
+  }
+  #pages section#content.contact-list .entry section.contact-description .content div.featured-image-list .span2 {
+    width: 30%;
+    margin-right: 1%;
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 10px;
+  }
+  #pages section#content.contact-list .entry section.contact-description .content .contact-form.row-fluid {
+    margin-top: 70px;
+  }
+  #pages section#content.contact-list .entry section.contact-description .content .contact-form.row-fluid > .span4 .wrapper {
+    margin-left: 0;
+  }
+  #pages section#content.contact-list .entry section.contact-description .content .contact-form.row-fluid > .span4 .wrapper {
+    background: url('../images/site/line-separator.jpg') bottom left repeat-x;
+    margin-bottom: 50px;
+    padding-bottom: 45px;
+  }
+  #pages section#content.contact-list .entry section.contact-description footer section.news-grid .span6:last-child {
+    background: url('../images/site/line-separator.jpg') top left repeat-x;
+    padding-top: 50px;
+    margin-top: 45px;
+  }
+  #pages section#content.clients .tab-clients-nav {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+  .clients-page .tab-content, #pages section.content-map {
+    background: #ffffff;
+  }
+}
+@media all and (max-width: 510px) {
+  #pages footer#footer .footer-content {
+    width: 100%;
+  }
+  #pages footer#words div.span9 p {
+    font-size: 21px;
+    line-height: 29px;
+  }
+  
+  #pages section#content.contact-list .entry section.contact-description footer section .span4:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+@media all and (max-width: 480px) {
+  #pages section#content.about-us {
+    margin-top: 32px;
+  }
+  #pages section#content .content-wrapper .span3 {
+    display: none;
+  }
+  #pages footer#footer .footer-content nav ul {
+    display: none;
+  }
+  #pages footer#footer {
+    height: 80px;
+    background: #000000;
+  }
+  #pages footer#footer .footer-content {
+    margin-left: 22px;
+    padding-top: 30px;
+  }
+  #pages section#content.services .content-wrapper .right-content .services-tab ul li {
+    font-size: 11px;
+  }
+  #pages section#content.services .content-wrapper .right-content .services-description h2 {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  #pages section#content.services .content-wrapper .right-content .services-description h4 {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  #pages section#content.about-us .right-content > section header nav.about-nav ul li a {
+    font-size: 12px;
+  }
+  #pages section#content.about-us .right-content > section .content h2 {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  #pages section#content.about-us .right-content > section .content h4 {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  #pages section#content .content-wrapper .span3, #pages section#content .content-wrapper .right-content, #pages footer#words div.span9 {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+  #pages section#content.about-us .right-content > section .content ul#timeline li {
+    margin-bottom: 20px;
+  }
+  #pages section#content.about-us .right-content > section .content ul#timeline li .text {
+    width: 70%;
+  }
+  #pages section#content.about-us .right-content > section header nav.about-nav ul li {
+    margin-right: 15px;
+  }
+  #pages footer#words div.span9 p {
+    margin-top: 38px;
+  }
+  #pages section#content.contact-list .entry h3.title {
+    font-size: 27px;
+    line-height: 27px;
+  }
+  #pages section#content.contact-list .entry {
+    margin-top: 47px;
+  }
+  #pages section#content.contact-list .entry > .row-fluid > .span2 {
+    display: none;
+  }
+  #pages section#content.contact-list .entry section.contact-description header h3 {
+    line-height: 25px;
+  }
+  #pages section#content.contact-list .entry section.contact-description header ul.feature-list li {
+    font-size: 14px;
+  }
+  #pages section#content.contact-list .entry section.contact-description header ul.feature-list {
+    margin-left: 0;
+  }
+  #pages section#content.contact-list .entry section.contact-description .content p, #pages section#content.contact-list .entry section.contact-description .content .contact-info {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  #pages section#content.contact-list .entry section.contact-description footer section h4 {
+    font-size: 18px;
+  }
+  #pages section#content.about-us .right-content > section footer {
+    margin-bottom: 10px;
+  }
+  #pages section#content.about-us .content-wrapper {
+    padding-top: 0;
+  }
+}
+@media all and (max-width: 320px) {
+  #pages footer#footer .footer-content nav ul {
+    display: none;
+  }
+  #pages footer#footer {
+    height: 80px;
+    background: #000000;
+  }
+  #pages footer#footer .footer-content {
+    margin-left: 22px;
+    padding-top: 30px;
+  }
+  #wrapper, body {
+    width: 320px;
+    margin: 0;
+    overflow-x: hidden;
+  }
+  #home #wrapper .home-splash {
+    margin-top: 24px;
+  }
+  #home #wrapper .home-splash > .row {
+    margin-top: 0;
+  }
+  #home #wrapper .home-splash > .row > .span2 .top-logo {
+    width: 70px;
+  }
+  #home #wrapper .home-splash > .row > .span2 .tagline {
+    padding-top: 23px;
+  }
+  #home #wrapper .home-splash > .row > .span2 nav ul {
+    margin-top: 19px;
+  }
+  #home #wrapper .home-splash > .row > .span10 {
+    width: 265px;
+    padding-left: 0;
+  }
+  #home #wrapper .home-splash > .row > .span10 .tweet p {
+    font-size: 11px;
+    line-height: 17px;
+  }
+  #home #wrapper .home-splash > .row > .span10 .tweet {
+    margin-top: 14px;
+  }
+}
