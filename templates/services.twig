@@ -1,0 +1,97 @@
+{% extends "layout/main" %}
+{% set bodyId = 'pages' %}
+
+{% block content %}
+    <div id="wrapper">
+      
+      <header id="header">
+        
+       {% include "layout/mobile-menu" with {title:'services'} %}
+       {% include "layout/mobile-header"%}
+       {% include "layout/desktop-menu"%}
+        
+      
+      </header> <!-- #header -->
+      
+      <section id="content" class="services">
+        <div class="content-wrapper row-fluid">
+          <div class="span3">
+          
+          </div>
+          <div class="span9 right-content">
+            
+            <nav class="services-tab">
+              <ul>
+                <li class="selected"> <a data-toggle="tab" href="#services-item-tenant"> Tenant <br/> Representation </a> </li>
+                <li> <a data-toggle="tab" href="#services-item-property"> Property <br/> Leasing </a> </li>
+                <li> <a data-toggle="tab" href="#services-item-master"> Master <br/> Brokerage </a> </li>
+                <li> <a data-toggle="tab" href="#services-item-investment"> Investment <br/> Sales </a> </li>
+                <li> <a data-toggle="tab" href="#services-item-development"> Development <br/> Services </a> </li>
+              </ul>
+            </nav>
+            
+            <div class="services-tab-content tab-content">
+              <div class="services-description tab-pane fade" id="services-item-tenant">
+                <h2>Maecenas sed diam eget risus varius blandit sit amet non magna. Maecenas faucibus mollis interdum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec sed odio dui. Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</h2>
+                <h4>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Cras mattis consectetur purus sit amet fermentum. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nullam quis risus eget urna mollis ornare vel eu leo. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</h4>
+              
+                <div id="services-carousel" class="carousel slide">
+                  <div class="carousel-inner">
+                    <div class="active item"> <img src="images/site/services_slider.jpg" alt="Slider" /> </div>
+                    <div class="item"> <img src="images/site/services_slider.jpg" alt="Slider" /> </div>
+                    <div class="item"> <img src="images/site/services_slider.jpg" alt="Slider" /> </div>
+                  </div>
+                  
+                  <div class="control-wrapper">
+                    <a class="carousel-control left" href="#services-carousel" data-slide="prev">< Prev</a> \
+                    <a class="carousel-control right" href="#services-carousel" data-slide="next"> Next ></a>
+                  </div>
+                </div>
+              </div> <!-- .services-description -->
+              <div class="services-description tab-pane fade" id="services-item-property">
+                <h2>2 Maecenas sed diam eget risus varius blandit sit amet non magna. Maecenas faucibus mollis interdum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec sed odio dui. Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</h2>
+                <h4>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Cras mattis consectetur purus sit amet fermentum. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nullam quis risus eget urna mollis ornare vel eu leo. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</h4>
+              
+                <div id="services-carousel2" class="carousel slide">
+                  <div class="carousel-inner">
+                    <div class="active item"> <img src="images/site/services_slider.jpg" alt="Slider" /> </div>
+                    <div class="item"> <img src="images/site/services_slider.jpg" alt="Slider" /> </div>
+                    <div class="item"> <img src="images/site/services_slider.jpg" alt="Slider" /> </div>
+                  </div>
+                  
+                  <div class="control-wrapper">
+                    <a class="carousel-control left" href="#services-carousel2" data-slide="prev">< Prev</a> \
+                    <a class="carousel-control right" href="#services-carousel2" data-slide="next"> Next ></a>
+                  </div>
+                </div> <!-- .services-description -->
+              </div> <!-- .services-tab-content -->
+              
+              <div class="services-description tab-pane fade" id="services-item-master">
+              </div>
+              <div class="services-description tab-pane fade" id="services-item-investment">
+              </div>
+              <div class="services-description tab-pane fade" id="services-item-development">
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </section> <!-- #content -->
+      
+      <footer id="footer">
+        <div class="row-fluid footer-content">
+          <nav>
+            <ul>
+              <li> <a href="about.html">About Us</a> </li>
+              <li> <span>/</span><a href="services.html">Services</a> </li>
+              <li> <span>/</span><a href="clients.html">Clients</a> </li>
+              <li> <span>/</span><a href="property.html">Property Listings</a> </li>
+              <li> <span>/</span><a href="contact.html">Contact</a> </li>
+            </ul>
+          </nav>
+          <span class="copyright">&copy; 2013 Ferrara Jerum International. All Rights Reserved.</span>
+        </div>
+      </footer> <!-- #footer -->
+      
+    </div> <!-- #wrapper -->
+{% endblock %}

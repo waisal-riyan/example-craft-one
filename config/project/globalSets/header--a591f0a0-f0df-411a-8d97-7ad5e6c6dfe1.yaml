@@ -1,0 +1,19 @@
+fieldLayouts:
+  201bb17d-1193-4006-8ce6-e47fe8c2d610:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 5805266d-5664-4a42-91a6-cad390cda016 # Nav Links
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+handle: header
+name: Header
+sortOrder: 2

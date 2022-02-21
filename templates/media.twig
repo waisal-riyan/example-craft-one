@@ -1,0 +1,110 @@
+{% extends "layout/main" %}
+{% set bodyId = 'pages' %}
+
+
+{% block content %}
+    <div id="wrapper">
+      
+      <header id="header">
+          {% include "layout/mobile-menu" with {title:'media',showMedia:true} %}
+       {% include "layout/mobile-header" with {showMedia:true} %}
+       {% include "layout/desktop-menu" with {showMedia:true}%}
+      </header> <!-- #header -->
+      
+      <section id="content" class="media">
+        <div class="content-wrapper row-fluid">
+          <div class="span3"></div> <!-- .span3 -->
+          <div class="span9 right-content">
+            
+            <div class="entry">
+            
+              <section class="tweet-timeline">
+                <header>
+                  <h1> Latest From <a href="">@fjirealestate</a> <img src="images/site/icon-twitter-big.jpg" /> </h1>
+                </header> <!-- header -->
+                
+                <div class="content">
+					<a class="twitter-timeline" height="300" href="https://twitter.com/FJIrealestate" data-widget-id="347102420087750656" data-chrome="nofooter noheader noborders transparent">Tweets by @FJIrealestate</a>
+					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+                </div> <!-- .content -->
+              </section> <!-- .tweet-timeline -->
+              
+              <section class="all-media">
+                <header>
+                  <h1> News, Press, Blog </h1>
+                </header>
+                
+                <div class="content">
+                  
+                  <div class="item-post">
+                    <span class="meta"> Posted on December 21, 2012 in <a href="">News</a> </span> <!-- .meta -->
+                    <h3> Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. </h3>
+                    <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Cras mattis consectetur purus sit amet fermentum. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nullam quis risus eget urna mollis ornare vel eu leo. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                    
+                    <a href="" class="button-read-more"> Read More </a>
+                  </div> <!-- .item-post -->
+                  
+                  <div class="item-post">
+                    <span class="meta"> Posted on December 21, 2012 in <a href="">Press</a> </span> <!-- .meta -->
+                    <h3> Donec sed odio dui. Sollicitudin Parturient Sem Etiam </h3>
+                    <p>Fusce dapibus, tellus ac cursus commodo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
+                    
+                    <a href="" class="button-read-more"> Read More </a>
+                  </div> <!-- .item-post -->
+                  
+                  <div class="item-post">
+                    <span class="meta"> Posted on December 21, 2012 in <a href="">News</a> </span> <!-- .meta -->
+                    <h3> Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. </h3>
+                    <img src="images/site/media.jpg" /> <br/> 
+                    <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Cras mattis consectetur purus sit amet fermentum. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nullam quis risus eget urna mollis ornare vel eu leo. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                    
+                    <a href="" class="button-read-more"> Read More </a>
+                  </div> <!-- .item-post -->
+                  
+                  <ul class="paging"> 
+	                <li> <a href=""> <img src="images/site/arrow-left.jpg" /> </a> </li>
+	                <li> <a href="" class="active"> 1 </a> </li>
+	                <li> <a href=""> 2 </a> </li>
+	                <li> <a href=""> 3 </a> </li>
+	                <li> <a href=""> 4 </a> </li>
+	                <li> <a href=""> <img src="images/site/arrow-right.jpg" /> </a> </li>
+                  </ul>
+                  
+                </div> <!-- .content -->
+              </section> <!-- .all-media -->
+            
+            </div>
+            
+          </div> <!-- .right-content -->
+        </div> <!-- .content-wrapper -->
+      </section> <!-- #content -->
+            
+      <footer id="words">
+        <div class="row-fluid">
+          <div class="span3">
+          </div> <!-- .span3 -->
+          <div class="span9">
+            <p>"It takes 20 years to build a reputation and five minutes to ruin it. If you think about that, you'll do things differently"</p>
+            <p class="name">- Warren Buffet</p>
+          </div>
+        </div>
+      </footer>
+      
+      <footer id="footer">
+        <div class="row-fluid footer-content">
+          <nav>
+            <ul>
+              <li> <a href="about.html">About Us</a> </li>
+              <li> <span>/</span><a href="services.html">Services</a> </li>
+              <li> <span>/</span><a href="clients.html">Clients</a> </li>
+              <li> <span>/</span><a href="property.html">Property Listings</a> </li>
+              <li> <span>/</span><a href="contact.html">Contact</a> </li>
+            </ul>
+          </nav>
+          <span class="copyright">&copy; 2013 Ferrara Jerum International. All Rights Reserved.</span>
+        </div>
+      </footer> <!-- #footer -->
+      
+    </div> <!-- #wrapper -->
+{% endblock %}

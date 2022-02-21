@@ -1,0 +1,15 @@
+{% import "_macros.twig" as macros %}
+
+{# param #}
+{% set id = id ?? null %}
+
+<nav id="{{id}}">
+	<ul>
+	{% for item in header.navLinks.all() %}	
+	{% set destination = item.linkDestination.one() %}
+		<li>
+			<a href="{{destination.url}}" class='{{macros.is_active(destination.uri)}}'>{{item.linkText}}</a>
+		</li>
+	{% endfor %}
+	</ul>
+</nav>

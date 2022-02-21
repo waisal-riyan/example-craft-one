@@ -1,0 +1,39 @@
+dateModified: 1645452547
+email:
+  fromEmail: waisalriyanto.rpl2.16@gmail.com
+  fromName: localhost/example-craft-one
+  transportType: craft\mail\transportadapters\Sendmail
+meta:
+  __names__:
+    00ee182b-4d8f-4ad2-a473-86b7306fc904: Services # Services
+    2b232fb3-8c46-45ba-8cf6-033789dbedf4: Common # Common
+    7a9179e3-91ee-4a6f-8549-73951bed032b: localhost/example-craft-one # localhost/example-craft-one
+    8f29e7f1-4c89-4fd7-a889-3b70a397efd1: 'Link Destination' # Link Destination
+    11a49352-9bf8-4497-8d9c-bfa0d4b9ecd1: Link # Link
+    21db52f6-c3ca-4c68-ab9c-919416b071dc: Contact # Contact
+    60e619f9-0c07-431e-a4ca-ae9599eacea8: localhost/example-craft-one # localhost/example-craft-one
+    6464eb26-37ac-4543-b412-7cffdb3ab8d1: 'About Us' # About Us
+    7269c2cc-4ab9-49cf-a31e-1a4ed9f52485: Clients # Clients
+    78151dfa-65d5-4575-867f-0f743efaac0d: Services # Services
+    358210bf-5a75-47a8-b81f-0427df41731a: Contact # Contact
+    5805266d-5664-4a42-91a6-cad390cda016: 'Nav Links' # Nav Links
+    07947859-a55f-4c09-987f-de0b639a5300: Clients # Clients
+    66572391-eb02-4ac6-8012-251bb8ab626d: 'Link Text' # Link Text
+    a09a5068-06ce-4797-849b-bda38218d639: Media # Media
+    a31f57f5-9e0b-433d-a570-16656fd10fdf: Home # Home
+    a591f0a0-f0df-411a-8d97-7ad5e6c6dfe1: Header # Header
+    a744ca11-952b-41b5-8cd7-66af90faacf6: 'About Us' # About Us
+    cb2411de-20bc-4a27-b5ad-e388f94e6c93: Media # Media
+system:
+  edition: solo
+  live: true
+  name: $PRIMARY_SITE_URL
+  retryDuration: null
+  schemaVersion: 3.7.33
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  requireEmailVerification: true

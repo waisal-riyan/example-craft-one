@@ -1,0 +1,252 @@
+{% extends "layout/main" %}
+
+{% set bodyId = 'pages' %}
+
+{% block content %}
+
+    <div id="wrapper">
+      
+      <header id="header">
+         {% include "layout/mobile-menu" with {title:'clients'} %}
+       {% include "layout/mobile-header"%}
+       {% include "layout/desktop-menu"%}
+      </header> <!-- #header -->
+      
+      <section id="content" class="clients">
+        <div class="content-wrapper row-fluid">
+          <div class="span12">
+            <ul class="tab-clients-nav">
+              <li> <a data-toggle="tab" href="#tenants">Tenants</a> </li>
+              <li> <a data-toggle="tab" href="#owners">Owners</a> </li>
+            </ul>
+          </div>
+        </div> <!-- .content-wrapper -->
+      </section> <!-- #content -->
+      
+      <div class="tab-content">
+	      <section class="content-map tab-pane" id="tenants">
+	        <div class="row-fluid visible-phone">
+	          <ul class="clients-list-mobile">
+	            <li>
+	              <div class="clients-data">  
+	                <img src="images/site/wallmart-white.png" /> 
+	                <span>Bentonville, AZ</span> 
+	                <p><strong>Territory:</strong> Upstate NY, CT and Western MA <br/> <strong>Company Contact:</strong> Douglas Jerum</p> 
+	                <p>18-30 acres of land, depending on zoning requirements; Prototype is 181,000sf; ability to have a fueling station and drive thru pharmacy preferred.</p> 
+	                <p>Walmart Supercenters are a one-stop shopping experience for electronics, apparel, toys and home furnishings, plus the convenience of a grocery store. The company operates 3,158 Supercenters and 561 Discount Stores in the U.S.</p>
+	              </div>
+	            </li>
+	            <li>
+	              <div class="clients-data">  
+	                <img src="images/site/wallmart-white.png" /> 
+	                <span>Bentonville, AZ</span> 
+	                <p><strong>Territory:</strong> Upstate NY, CT and Western MA <br/> <strong>Company Contact:</strong> Douglas Jerum</p> 
+	                <p>18-30 acres of land, depending on zoning requirements; Prototype is 181,000sf; ability to have a fueling station and drive thru pharmacy preferred.</p> 
+	                <p>Walmart Supercenters are a one-stop shopping experience for electronics, apparel, toys and home furnishings, plus the convenience of a grocery store. The company operates 3,158 Supercenters and 561 Discount Stores in the U.S.</p>
+	              </div>
+	            </li>
+	            <li>
+	              <div class="clients-data">  
+	                <img src="images/site/wallmart-white.png" /> 
+	                <span>Bentonville, AZ</span> 
+	                <p><strong>Territory:</strong> Upstate NY, CT and Western MA <br/> <strong>Company Contact:</strong> Douglas Jerum</p> 
+	                <p>18-30 acres of land, depending on zoning requirements; Prototype is 181,000sf; ability to have a fueling station and drive thru pharmacy preferred.</p> 
+	                <p>Walmart Supercenters are a one-stop shopping experience for electronics, apparel, toys and home furnishings, plus the convenience of a grocery store. The company operates 3,158 Supercenters and 561 Discount Stores in the U.S.</p>
+	              </div>
+	            </li>
+	            <li>
+	              <div class="clients-data">  
+	                <img src="images/site/wallmart-white.png" /> 
+	                <span>Bentonville, AZ</span> 
+	                <p><strong>Territory:</strong> Upstate NY, CT and Western MA <br/> <strong>Company Contact:</strong> Douglas Jerum</p> 
+	                <p>18-30 acres of land, depending on zoning requirements; Prototype is 181,000sf; ability to have a fueling station and drive thru pharmacy preferred.</p> 
+	                <p>Walmart Supercenters are a one-stop shopping experience for electronics, apparel, toys and home furnishings, plus the convenience of a grocery store. The company operates 3,158 Supercenters and 561 Discount Stores in the U.S.</p>
+	              </div>
+	            </li>
+	          </ul>
+	        </div>
+	      
+      	  <div class="row-fluid hidden-phone">
+   	       <div class="span7 map-wrapper">
+	            <div class="map">
+         	     <img src="images/site/map.jpg" alt="Map" />
+  <span class="map-dot" data-top="365" data-left="401" data-content="<div class='clients-data'>  <img src='/images/uploads/general/image-holder.jpg' class='floatright'> <img src='/images/uploads/general/wallmart.jpg' /> <span>Bentonville, AZ</span> <p><strong>Territory:</strong> Upstate NY, CT and Western MA <br/> <strong>Company Contact:</strong> Douglas Jerum</p> <p>
+	18-30 acres of land, depending on zoning requirements; Prototype is 181,000sf; ability to have a fueling station and drive thru pharmacy preferred.</p>
+<p>
+	Walmart Supercenters are a one-stop shopping experience for electronics, apparel, toys and home furnishings, plus the convenience of a grocery store. The company operates 3,158 Supercenters and 561 Discount Stores in the U.S.</p> <div class='socmed'> <a href='http://google.com' class='url'></a> <a href='http://twitter.com' class='twitter'></a> <a href='http://facebook.com' class='facebook'></a> <a href='http://pinterest.com' class='pinterest'></a> <a href='http://youtube.com' class='youtube'></a> </div><span class='popover-close'></span></div>" data-toggle="popover" data-placement="top">1</span>
+         	     
+         	       <span class="map-dot" data-top="365" data-left="428" data-content="<div class='clients-data'>  <img src='/images/uploads/general/image-holder.jpg' class='floatright'> <img src='' /> <span>Bentonville, AZ</span> <p><strong>Territory:</strong> Upstate NY, CT and Western MA <br/> <strong>Company Contact:</strong> Douglas Jerum</p> <p>
+	18-30 acres of land, depending on zoning requirements; Prototype is 181,000sf; ability to have a fueling station and drive thru pharmacy preferred.</p>
+<p>
+	Walmart Supercenters are a one-stop shopping experience for electronics, apparel, toys and home furnishings, plus the convenience of a grocery store. The company operates 3,158 Supercenters and 561 Discount Stores in the U.S.</p> <div class='socmed'> <a href='http://google.com' class='url'></a> <a href='http://twitter.com' class='twitter'></a> <a href='http://facebook.com' class='facebook'></a> <a href='http://pinterest.com' class='pinterest'></a> <a href='http://youtube.com' class='youtube'></a> </div><span class='popover-close'></span></div>" data-toggle="popover" data-placement="top">2</span>
+         	     
+         	       <span class="map-dot" data-top="388" data-left="415" data-content="<div class='clients-data'>  <img src='/images/uploads/general/image-holder.jpg' class='floatright'> <img src='' /> <span>Bentonville, AZ</span> <p><strong>Territory:</strong> Upstate NY, CT and Western MA <br/> <strong>Company Contact:</strong> Douglas Jerum</p> <p>
+	18-30 acres of land, depending on zoning requirements; Prototype is 181,000sf; ability to have a fueling station and drive thru pharmacy preferred.</p>
+<p>
+	Walmart Supercenters are a one-stop shopping experience for electronics, apparel, toys and home furnishings, plus the convenience of a grocery store. The company operates 3,158 Supercenters and 561 Discount Stores in the U.S.</p> <div class='socmed'> <a href='http://google.com' class='url'></a> <a href='http://twitter.com' class='twitter'></a> <a href='http://facebook.com' class='facebook'></a> <a href='http://pinterest.com' class='pinterest'></a> <a href='http://youtube.com' class='youtube'></a> </div><span class='popover-close'></span></div>" data-toggle="popover" data-placement="top">3</span>
+         	     
+         	       <span class="map-dot" data-top="395" data-left="82" data-content="<div class='clients-data'>  <img src='/images/uploads/general/image-holder.jpg' class='floatright'> <img src='' /> <span>Bentonville, AZ</span> <p><strong>Territory:</strong> Upstate NY, CT and Western MA <br/> <strong>Company Contact:</strong> Douglas Jerum</p> <p>
+	18-30 acres of land, depending on zoning requirements; Prototype is 181,000sf; ability to have a fueling station and drive thru pharmacy preferred.</p>
+<p>
+	Walmart Supercenters are a one-stop shopping experience for electronics, apparel, toys and home furnishings, plus the convenience of a grocery store. The company operates 3,158 Supercenters and 561 Discount Stores in the U.S.</p> <div class='socmed'> <a href='http://google.com' class='url'></a> <a href='http://twitter.com' class='twitter'></a> <a href='http://facebook.com' class='facebook'></a> <a href='http://pinterest.com' class='pinterest'></a> <a href='http://youtube.com' class='youtube'></a> </div><span class='popover-close'></span></div>" data-toggle="popover" data-placement="top">4</span>
+         	     
+         	       <span class="map-dot" data-top="155" data-left="31" data-content="<div class='clients-data'>  <img src='/images/uploads/general/image-holder.jpg' class='floatright'> <img src='' /> <span>Bentonville, AZ</span> <p><strong>Territory:</strong> Upstate NY, CT and Western MA <br/> <strong>Company Contact:</strong> Douglas Jerum</p> <p>
+	18-30 acres of land, depending on zoning requirements; Prototype is 181,000sf; ability to have a fueling station and drive thru pharmacy preferred.</p>
+<p>
+	Walmart Supercenters are a one-stop shopping experience for electronics, apparel, toys and home furnishings, plus the convenience of a grocery store. The company operates 3,158 Supercenters and 561 Discount Stores in the U.S.</p> <div class='socmed'> <a href='http://google.com' class='url'></a> <a href='http://twitter.com' class='twitter'></a> <a href='http://facebook.com' class='facebook'></a> <a href='http://pinterest.com' class='pinterest'></a> <a href='http://youtube.com' class='youtube'></a> </div><span class='popover-close'></span></div>" data-toggle="popover" data-placement="top">5</span>
+         	     
+         	       <span class="map-dot" data-top="395" data-left="109" data-content="<div class='clients-data'>  <img src='/images/uploads/general/image-holder.jpg' class='floatright'> <img src='' /> <span>Bentonville, AZ</span> <p><strong>Territory:</strong> Upstate NY, CT and Western MA <br/> <strong>Company Contact:</strong> Douglas Jerum</p> <p>
+	18-30 acres of land, depending on zoning requirements; Prototype is 181,000sf; ability to have a fueling station and drive thru pharmacy preferred.</p>
+<p>
+	Walmart Supercenters are a one-stop shopping experience for electronics, apparel, toys and home furnishings, plus the convenience of a grocery store. The company operates 3,158 Supercenters and 561 Discount Stores in the U.S.</p> <div class='socmed'> <a href='http://google.com' class='url'></a> <a href='http://twitter.com' class='twitter'></a> <a href='http://facebook.com' class='facebook'></a> <a href='http://pinterest.com' class='pinterest'></a> <a href='http://youtube.com' class='youtube'></a> </div><span class='popover-close'></span></div>" data-toggle="popover" data-placement="top">6</span>
+         	     
+         	       <span class="map-dot" data-top="365" data-left="600" data-content="<div class='clients-data'>  <img src='/images/uploads/general/image-holder.jpg' class='floatright'> <img src='' /> <span>Bentonville, AZ</span> <p><strong>Territory:</strong> Upstate NY, CT and Western MA <br/> <strong>Company Contact:</strong> Douglas Jerum</p> <p>
+	18-30 acres of land, depending on zoning requirements; Prototype is 181,000sf; ability to have a fueling station and drive thru pharmacy preferred.</p>
+<p>
+	Walmart Supercenters are a one-stop shopping experience for electronics, apparel, toys and home furnishings, plus the convenience of a grocery store. The company operates 3,158 Supercenters and 561 Discount Stores in the U.S.</p> <div class='socmed'> <a href='http://google.com' class='url'></a> <a href='http://twitter.com' class='twitter'></a> <a href='http://facebook.com' class='facebook'></a> <a href='http://pinterest.com' class='pinterest'></a> <a href='http://youtube.com' class='youtube'></a> </div><span class='popover-close'></span></div>" data-toggle="popover" data-placement="top">7</span>
+         	     
+         	       <span class="map-dot" data-top="116" data-left="25" data-content="<div class='clients-data'>  <img src='/images/uploads/general/image-holder.jpg' class='floatright'> <img src='' /> <span>Bentonville, AZ</span> <p><strong>Territory:</strong> Upstate NY, CT and Western MA <br/> <strong>Company Contact:</strong> Douglas Jerum</p> <p>
+	18-30 acres of land, depending on zoning requirements; Prototype is 181,000sf; ability to have a fueling station and drive thru pharmacy preferred.</p>
+<p>
+	Walmart Supercenters are a one-stop shopping experience for electronics, apparel, toys and home furnishings, plus the convenience of a grocery store. The company operates 3,158 Supercenters and 561 Discount Stores in the U.S.</p> <div class='socmed'> <a href='http://google.com' class='url'></a> <a href='http://twitter.com' class='twitter'></a> <a href='http://facebook.com' class='facebook'></a> <a href='http://pinterest.com' class='pinterest'></a> <a href='http://youtube.com' class='youtube'></a> </div><span class='popover-close'></span></div>" data-toggle="popover" data-placement="top">8</span>
+         	     
+         	       <span class="map-dot" data-top="249" data-left="538" data-content="<div class='clients-data'>  <img src='/images/uploads/general/image-holder.jpg' class='floatright'> <img src='' /> <span>Bentonville, AZ</span> <p><strong>Territory:</strong> Upstate NY, CT and Western MA <br/> <strong>Company Contact:</strong> Douglas Jerum</p> <p>
+	18-30 acres of land, depending on zoning requirements; Prototype is 181,000sf; ability to have a fueling station and drive thru pharmacy preferred.</p>
+<p>
+	Walmart Supercenters are a one-stop shopping experience for electronics, apparel, toys and home furnishings, plus the convenience of a grocery store. The company operates 3,158 Supercenters and 561 Discount Stores in the U.S.</p> <div class='socmed'> <a href='http://google.com' class='url'></a> <a href='http://twitter.com' class='twitter'></a> <a href='http://facebook.com' class='facebook'></a> <a href='http://pinterest.com' class='pinterest'></a> <a href='http://youtube.com' class='youtube'></a> </div><span class='popover-close'></span></div>" data-toggle="popover" data-placement="top">9</span>
+         	     
+         	       <span class="map-dot" data-top="276" data-left="671" data-content="<div class='clients-data'>  <img src='/images/uploads/general/image-holder.jpg' class='floatright'> <img src='' /> <span>Bentonville, AZ</span> <p><strong>Territory:</strong> Upstate NY, CT and Western MA <br/> <strong>Company Contact:</strong> Douglas Jerum</p> <p>
+	18-30 acres of land, depending on zoning requirements; Prototype is 181,000sf; ability to have a fueling station and drive thru pharmacy preferred.</p>
+<p>
+	Walmart Supercenters are a one-stop shopping experience for electronics, apparel, toys and home furnishings, plus the convenience of a grocery store. The company operates 3,158 Supercenters and 561 Discount Stores in the U.S.</p> <div class='socmed'> <a href='http://google.com' class='url'></a> <a href='http://twitter.com' class='twitter'></a> <a href='http://facebook.com' class='facebook'></a> <a href='http://pinterest.com' class='pinterest'></a> <a href='http://youtube.com' class='youtube'></a> </div><span class='popover-close'></span></div>" data-toggle="popover" data-placement="top">10</span>
+         	     
+         	       <span class="map-dot" data-top="258" data-left="702" data-content="<div class='clients-data'>  <img src='/images/uploads/general/image-holder.jpg' class='floatright'> <img src='' /> <span>Bentonville, AZ</span> <p><strong>Territory:</strong> Upstate NY, CT and Western MA <br/> <strong>Company Contact:</strong> Douglas Jerum</p> <p>
+	18-30 acres of land, depending on zoning requirements; Prototype is 181,000sf; ability to have a fueling station and drive thru pharmacy preferred.</p>
+<p>
+	Walmart Supercenters are a one-stop shopping experience for electronics, apparel, toys and home furnishings, plus the convenience of a grocery store. The company operates 3,158 Supercenters and 561 Discount Stores in the U.S.</p> <div class='socmed'> <a href='http://google.com' class='url'></a> <a href='http://twitter.com' class='twitter'></a> <a href='http://facebook.com' class='facebook'></a> <a href='http://pinterest.com' class='pinterest'></a> <a href='http://youtube.com' class='youtube'></a> </div><span class='popover-close'></span></div>" data-toggle="popover" data-placement="top">11</span>
+         	     
+         	       <span class="map-dot" data-top="414" data-left="368" data-content="<div class='clients-data'>  <img src='/images/uploads/general/image-holder.jpg' class='floatright'> <img src='' /> <span>Bentonville, AZ</span> <p><strong>Territory:</strong> Upstate NY, CT and Western MA <br/> <strong>Company Contact:</strong> Douglas Jerum</p> <p>
+	18-30 acres of land, depending on zoning requirements; Prototype is 181,000sf; ability to have a fueling station and drive thru pharmacy preferred.</p>
+<p>
+	Walmart Supercenters are a one-stop shopping experience for electronics, apparel, toys and home furnishings, plus the convenience of a grocery store. The company operates 3,158 Supercenters and 561 Discount Stores in the U.S.</p> <div class='socmed'> <a href='http://google.com' class='url'></a> <a href='http://twitter.com' class='twitter'></a> <a href='http://facebook.com' class='facebook'></a> <a href='http://pinterest.com' class='pinterest'></a> <a href='http://youtube.com' class='youtube'></a> </div><span class='popover-close'></span></div>" data-toggle="popover" data-placement="top">12</span>
+         	     
+         	       <span class="map-dot" data-top="259" data-left="478" data-content="<div class='clients-data'>  <img src='/images/uploads/general/image-holder.jpg' class='floatright'> <img src='' /> <span>Bentonville, AZ</span> <p><strong>Territory:</strong> Upstate NY, CT and Western MA <br/> <strong>Company Contact:</strong> Douglas Jerum</p> <p>
+	18-30 acres of land, depending on zoning requirements; Prototype is 181,000sf; ability to have a fueling station and drive thru pharmacy preferred.</p>
+<p>
+	Walmart Supercenters are a one-stop shopping experience for electronics, apparel, toys and home furnishings, plus the convenience of a grocery store. The company operates 3,158 Supercenters and 561 Discount Stores in the U.S.</p> <div class='socmed'> <a href='http://google.com' class='url'></a> <a href='http://twitter.com' class='twitter'></a> <a href='http://facebook.com' class='facebook'></a> <a href='http://pinterest.com' class='pinterest'></a> <a href='http://youtube.com' class='youtube'></a> </div><span class='popover-close'></span></div>" data-toggle="popover" data-placement="top">13</span>
+         	     
+         	       <span class="map-dot" data-top="291" data-left="645" data-content="<div class='clients-data'>  <img src='/images/uploads/general/image-holder.jpg' class='floatright'> <img src='' /> <span>Bentonville, AZ</span> <p><strong>Territory:</strong> Upstate NY, CT and Western MA <br/> <strong>Company Contact:</strong> Douglas Jerum</p> <p>
+	18-30 acres of land, depending on zoning requirements; Prototype is 181,000sf; ability to have a fueling station and drive thru pharmacy preferred.</p>
+<p>
+	Walmart Supercenters are a one-stop shopping experience for electronics, apparel, toys and home furnishings, plus the convenience of a grocery store. The company operates 3,158 Supercenters and 561 Discount Stores in the U.S.</p> <div class='socmed'> <a href='http://google.com' class='url'></a> <a href='http://twitter.com' class='twitter'></a> <a href='http://facebook.com' class='facebook'></a> <a href='http://pinterest.com' class='pinterest'></a> <a href='http://youtube.com' class='youtube'></a> </div><span class='popover-close'></span></div>" data-toggle="popover" data-placement="top">14</span>
+         	     
+         	       <span class="map-dot" data-top="373" data-left="66" data-content="<div class='clients-data'>  <img src='/images/uploads/general/image-holder.jpg' class='floatright'> <img src='' /> <span>Bentonville, AZ</span> <p><strong>Territory:</strong> Upstate NY, CT and Western MA <br/> <strong>Company Contact:</strong> Douglas Jerum</p> <p>
+	18-30 acres of land, depending on zoning requirements; Prototype is 181,000sf; ability to have a fueling station and drive thru pharmacy preferred.</p>
+<p>
+	Walmart Supercenters are a one-stop shopping experience for electronics, apparel, toys and home furnishings, plus the convenience of a grocery store. The company operates 3,158 Supercenters and 561 Discount Stores in the U.S.</p> <div class='socmed'> <a href='http://google.com' class='url'></a> <a href='http://twitter.com' class='twitter'></a> <a href='http://facebook.com' class='facebook'></a> <a href='http://pinterest.com' class='pinterest'></a> <a href='http://youtube.com' class='youtube'></a> </div><span class='popover-close'></span></div>" data-toggle="popover" data-placement="top">15</span>
+         	     
+         	       <span class="map-dot" data-top="239" data-left="627" data-content="<div class='clients-data'>  <img src='/images/uploads/general/image-holder.jpg' class='floatright'> <img src='' /> <span>Bentonville, AZ</span> <p><strong>Territory:</strong> Upstate NY, CT and Western MA <br/> <strong>Company Contact:</strong> Douglas Jerum</p> <p>
+	18-30 acres of land, depending on zoning requirements; Prototype is 181,000sf; ability to have a fueling station and drive thru pharmacy preferred.</p>
+<p>
+	Walmart Supercenters are a one-stop shopping experience for electronics, apparel, toys and home furnishings, plus the convenience of a grocery store. The company operates 3,158 Supercenters and 561 Discount Stores in the U.S.</p> <div class='socmed'> <a href='http://google.com' class='url'></a> <a href='http://twitter.com' class='twitter'></a> <a href='http://facebook.com' class='facebook'></a> <a href='http://pinterest.com' class='pinterest'></a> <a href='http://youtube.com' class='youtube'></a> </div><span class='popover-close'></span></div>" data-toggle="popover" data-placement="top">16</span>
+         	     
+         	     
+         	     
+      	      </div>
+   	       </div>
+	          <span></span>
+	          <div class="clients-wrapper">
+         	   <div class="clients-list">
+      	        <h3>Tenants</h3>
+   	           <ul>
+	                <li>01. Walmart</li>
+               	 <li>02. Sam's Club</li>
+            	    <li>03. Walmart Neighborhood Market</li>
+         	       <li>04. LA Fitness</li>
+      	          <li>05. Starbucks Coffe Company</li>
+   	             <li>06. Yogurtland</li>
+	                <li>07. Gold Corral</li>
+            	    <li>08. Lululemon Athletica</li>
+         	       <li>09. Pet Supplies Plus</li>
+      	          <li>10. Insomnia Cookies</li>
+   	             <li>11. Alex and Ani</li>
+	                <li>12. FedEx Office</li>
+      	          <li>13. OfficeMax</li>
+   	             <li>14. Pep Boys Auto</li>
+	                <li>15. Panda Express</li>
+               	 <li>16. Elizabeth Wende Breast Cancer Clinic</li>
+            	  </ul>
+         	   </div>
+      	    </div>
+   	     </div>
+	      </section> <!-- #content-map -->
+	      
+	      
+	      <section class="content-map tab-pane" id="owners">
+	        <div class="row-fluid visible-phone">
+	          <ul class="clients-list-mobile">
+	            <li>
+	              <div class="clients-data">  
+	                <img src="images/site/wallmart-white.png" /> 
+	                <span>Bentonville, AZ</span> 
+	                <p><strong>Territory:</strong> Upstate NY, CT and Western MA <br/> <strong>Company Contact:</strong> Douglas Jerum</p> 
+	                <p>18-30 acres of land, depending on zoning requirements; Prototype is 181,000sf; ability to have a fueling station and drive thru pharmacy preferred.</p> 
+	                <p>Walmart Supercenters are a one-stop shopping experience for electronics, apparel, toys and home furnishings, plus the convenience of a grocery store. The company operates 3,158 Supercenters and 561 Discount Stores in the U.S.</p>
+	              </div>
+	            </li>
+	            <li>
+	              <div class="clients-data">  
+	                <img src="images/site/wallmart-white.png" /> 
+	                <span>Bentonville, AZ</span> 
+	                <p><strong>Territory:</strong> Upstate NY, CT and Western MA <br/> <strong>Company Contact:</strong> Douglas Jerum</p> 
+	                <p>18-30 acres of land, depending on zoning requirements; Prototype is 181,000sf; ability to have a fueling station and drive thru pharmacy preferred.</p> 
+	                <p>Walmart Supercenters are a one-stop shopping experience for electronics, apparel, toys and home furnishings, plus the convenience of a grocery store. The company operates 3,158 Supercenters and 561 Discount Stores in the U.S.</p>
+	              </div>
+	            </li>
+	          </ul>
+	        </div>
+	        
+      	  <div class="row-fluid  hidden-phone">
+   	       <div class="span7 map-wrapper">
+	            <div class="map">
+         	     <img src="images/site/map.jpg" alt="Map" />
+         	     
+         	     
+         	     <span class="map-dot" data-top="365" data-left="427" data-content="<div class='clients-data'>  <img src='images/site/image-holder.jpg' class='floatright'> <img src='images/site/wallmart.jpg' /> <span>Bentonville, AZ</span> <p><strong>Territory:</strong> Upstate NY, CT and Western MA <br/> <strong>Company Contact:</strong> Douglas Jerum</p> <p>18-30 acres of land, depending on zoning requirements; Prototype is 181,000sf; ability to have a fueling station and drive thru pharmacy preferred.</p> <p>Walmart Supercenters are a one-stop shopping experience for electronics, apparel, toys and home furnishings, plus the convenience of a grocery store. The company operates 3,158 Supercenters and 561 Discount Stores in the U.S.</p> <div class='socmed'> <a href='' class='url'></a> <a href='' class='twitter'></a><a href='' class='facebook'></a> <a href='' class='pinterest'></a> <a href='' class='youtube'></a> </div><span class='popover-close'></span></div>" data-toggle="popover" data-placement="top">1</span>
+         	     
+      	      </div>
+   	       </div>
+	          <span></span>
+	          <div class="clients-wrapper">
+         	   <div class="clients-list">
+      	        <h3>Owners</h3>
+   	           <ul>
+	                <li>01. Aenean Cras Etiam</li>
+               	 <li>02. Tyrad Group</li>
+            	  </ul>
+         	   </div>
+      	    </div>
+   	     </div>
+	      </section> <!-- #content-map -->
+      </div> <!-- .tab-content -->
+      
+      <footer id="empty"></footer>
+      
+      <footer id="footer">
+        <div class="row-fluid footer-content">
+          <nav>
+            <ul>
+              <li> <a href="about.html">About Us</a> </li>
+              <li> <span>/</span><a href="services.html">Services</a> </li>
+              <li> <span>/</span><a href="clients.html">Clients</a> </li>
+              <li> <span>/</span><a href="property.html">Property Listings</a> </li>
+              <li> <span>/</span><a href="contact.html">Contact</a> </li>
+            </ul>
+          </nav>
+          <span class="copyright">&copy; 2013 Ferrara Jerum International. All Rights Reserved.</span>
+        </div>
+      </footer> <!-- #footer -->
+      
+    </div> <!-- #wrapper -->
+
+{% endblock %}

@@ -1,0 +1,12 @@
+defaultPlacement: end
+enableVersioning: true
+handle: contact
+name: Contact
+propagationMethod: all
+siteSettings:
+  60e619f9-0c07-431e-a4ca-ae9599eacea8: # localhost/example-craft-one
+    enabledByDefault: true
+    hasUrls: true
+    template: contact.twig
+    uriFormat: contact
+type: single
